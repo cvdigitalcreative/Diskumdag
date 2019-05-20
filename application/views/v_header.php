@@ -101,7 +101,7 @@
 																</a>
 															</li>
 															<li>
-																<a class="dropdown-item" href="index.html">
+																<a class="dropdown-item" href="<?=base_url()?>Berita/koperasi">
 																	Berita Koperasi
 																</a>
 															</li>

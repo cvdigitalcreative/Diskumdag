@@ -1,4 +1,4 @@
-<div class="container-fluid col-lg-6">
+<div class="container-fluid col-lg-4" style="margin-top: 50px;">
 
 <div class="overflow-hidden mb-1">
 	<h2 class="font-weight-normal text-7 mt-2 mb-0 appear-animation animated maskUp appear-animation-visible" data-appear-animation="maskUp" data-appear-animation-delay="200" style="animation-delay: 200ms;"><strong class="font-weight-extra-bold">Hubungi</strong> Kami</h2>

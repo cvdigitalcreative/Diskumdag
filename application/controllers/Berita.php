@@ -20,4 +20,16 @@ class Berita extends CI_Controller
         $this->load->view('v_footer');
         
     }
+    function koperasi()
+    {
+        $y['title'] = 'Berita Koperasi';
+        $x['info'] = $this->m_galeri->get_galeri_by_album_id(3);
+        $this->load->view('v_header', $y);
+        $this->load->view('v_koperasi', $x);
+        $this->load->view('v_footer');
+        
+    }
+
+
+
 }

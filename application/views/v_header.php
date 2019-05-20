@@ -106,27 +106,27 @@
 																</a>
 															</li>
 															<li>
-																<a class="dropdown-item" href="index.html">
+																<a class="dropdown-item" href="<?=base_url()?>Berita/perdagangan">
 																	Berita Perdagangan
 																</a>
 															</li>
 															<li>
-																<a class="dropdown-item" href="index.html">
-																	Berita WasdalPK
+																<a class="dropdown-item" href="<?=base_url()?>Berita/pk">
+																	Berita Wasdal PK
 																</a>
 															</li>
 															<li>
-																<a class="dropdown-item" href="index.html">
+																<a class="dropdown-item" href="<?=base_url()?>Berita/upm">
 																	Berita Unit Pengelola Metrologi
 																</a>
 															</li>
 															<li>
-																<a class="dropdown-item" href="index.html">
+																<a class="dropdown-item" href="<?=base_url()?>Berita/kukmp">
 																	Berita Pusat Diklat KUKMP
 																</a>
 															</li>
 															<li>
-																<a class="dropdown-item" href="index.html">
+																<a class="dropdown-item" href="<?=base_url()?>Berita/ppukmp">
 																	Berita UPK PPUKMP Pulogadung
 																</a>
 															</li>

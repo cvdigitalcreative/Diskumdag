@@ -6,7 +6,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
 
-		<title>Porto - Responsive HTML5 Template 7.4.0</title>	
+		<title><?=$title?></title>	
 
 		<meta name="keywords" content="HTML5 Template" />
 		<meta name="description" content="Porto - Responsive HTML5 Template">
@@ -79,7 +79,7 @@
 												<ul class="nav nav-pills" id="mainNav">
 													<li class="dropdown">
 														<a class="dropdown-item dropdown-toggle " href="">
-															Home
+															Beranda
 														</a>
 														<ul class="dropdown-menu">
 															<li>
@@ -89,16 +89,50 @@
 															</li>
 														</ul>
 													</li>
-													<li class="dropdown dropdown-mega">
-														<a class="dropdown-item dropdown-toggle" href="elements.html">
-															Elements
-														</a>
-													</li>
+
 													<li class="dropdown">
-														<a class="dropdown-item dropdown-toggle" href="#">
-															Features
+														<a class="dropdown-item dropdown-toggle " href="">
+															Berita
 														</a>
+														<ul class="dropdown-menu">
+															<li>
+																<a class="dropdown-item" href="<?=base_url()?>Berita/ukm">
+																	Berita UKM
+																</a>
+															</li>
+															<li>
+																<a class="dropdown-item" href="index.html">
+																	Berita Koperasi
+																</a>
+															</li>
+															<li>
+																<a class="dropdown-item" href="index.html">
+																	Berita Perdagangan
+																</a>
+															</li>
+															<li>
+																<a class="dropdown-item" href="index.html">
+																	Berita WasdalPK
+																</a>
+															</li>
+															<li>
+																<a class="dropdown-item" href="index.html">
+																	Berita Unit Pengelola Metrologi
+																</a>
+															</li>
+															<li>
+																<a class="dropdown-item" href="index.html">
+																	Berita Pusat Diklat KUKMP
+																</a>
+															</li>
+															<li>
+																<a class="dropdown-item" href="index.html">
+																	Berita UPK PPUKMP Pulogadung
+																</a>
+															</li>
+														</ul>
 													</li>
+
 													<li class="dropdown">
 														<a class="dropdown-item dropdown-toggle" href="<?=base_url()?>Info">
 															Info Grafis

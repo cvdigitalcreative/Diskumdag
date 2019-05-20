@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Info_grafis extends CI_Controller
+class Info extends CI_Controller
 {
     function __construct()
     {
@@ -16,5 +16,12 @@ class Info_grafis extends CI_Controller
         $this->load->view('v_header',$y);
         $this->load->view('v_infografis',$x);
         
+    }
+    function download()
+    {
+        $y['title']='Download';
+
+        $this->load->view('v_header',$y);
+        $this->load->view('v_download');
     }
 }

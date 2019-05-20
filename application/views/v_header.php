@@ -78,7 +78,7 @@
 											<nav class="collapse">
 												<ul class="nav nav-pills" id="mainNav">
 													<li class="dropdown">
-														<a class="dropdown-item dropdown-toggle active" href="index.html">
+														<a class="dropdown-item dropdown-toggle " href="">
 															Home
 														</a>
 														<ul class="dropdown-menu">
@@ -100,8 +100,18 @@
 														</a>
 													</li>
 													<li class="dropdown">
-														<a class="dropdown-item dropdown-toggle" href="<?=base_url()?>Info_grafis">
+														<a class="dropdown-item dropdown-toggle" href="<?=base_url()?>Info">
 															Info Grafis
+														</a>
+													</li>
+													<li class="dropdown">
+														<a class="dropdown-item dropdown-toggle" href="<?=base_url()?>Info/download">
+															Download
+														</a>
+													</li>
+													<li class="dropdown">
+														<a class="dropdown-item dropdown-toggle" href="<?=base_url()?>Kontak">
+															Kontak
 														</a>
 													</li>
 													</li>

@@ -26,9 +26,9 @@
                                 
     <?php
     foreach ($info->result_array() as $i) {
-        $gambar = $i['galeri_gambar'];
-        $judul = $i['galeri_judul'];
-        $deskripsi = $i['galeri_deskripsi'];
+        $gambar = $i['tulisan_gambar'];
+        $judul = $i['tulisan_judul'];
+        $deskripsi = $i['tulisan_isi'];
 
         ?>
 
@@ -46,9 +46,7 @@
                                             <p><?= limit_words($deskripsi, 23) . '...'; ?></p>
 
                                             <div class="post-meta">
-                                                <span><i class="far fa-user"></i> By <a href="#">Jessica Doe</a> </span>
-                                                <span><i class="far fa-folder"></i> <a href="#">Duis</a>, <a href="#">News</a> </span>
-                                                <span><i class="far fa-comments"></i> <a href="#">12 Comments</a></span>
+
                                                 <span class="d-block mt-2"><a href="<?= base_url() ?>" class="btn btn-xs btn-light text-1 text-uppercase">Read More</a></span>
                                             </div>
 

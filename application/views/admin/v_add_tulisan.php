@@ -71,7 +71,7 @@ wrapper -->
                   </div>
                   <div class="form-group">
                       <label for="exampleFormControlFile1">Upload Image</label>
-                      <input type="file" class="form-control-file" id="exampleFormControlFile1" name="filefoto"  required>
+                      <input type="file" class="form-control-file" id="exampleFormControlFile1" name="filefoto" >
                   </div>
                   <div class="form-group">
                       <button type="submit" class="btn btn-primary" name="signup" value="Sign up">Save It</button>

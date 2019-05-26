@@ -1,9 +1,5 @@
 <div class="col-xl-12" role="main">
-    <?php
-    foreach ($tanggal->result_array() as $i) {
-        $tanggal = $i['album_tanggal'];
-    }
-    ?>
+    
 
 
 
@@ -33,10 +29,10 @@
         <div class="container py-4">
             <?php
             foreach ($info->result_array() as $i) {
-                $gambar = $i['galeri_gambar'];
-                $judul = $i['galeri_judul'];
-                $deskripsi = $i['galeri_deskripsi'];
-                $slug=$i['galeri_slug'];
+                $gambar = $i['tulisan_gambar'];
+                $judul = $i['tulisan_judul'];
+                $deskripsi = $i['tulisan_isi'];
+                $slug=$i['tulisan_slug'];
 
                 ?>
 
@@ -56,7 +52,7 @@
 
                                     <h2 class="font-weight-semibold text-6 line-height-3 mb-3">
                                         <a style="    margin-left: -61px;"
-                                        href="<?php echo base_url()?>Berita/<?=$slug?>"><?= $judul ?></a>
+                                        href="<?php echo base_url()?>Berita/detail/<?=$slug?>"><?= $judul ?></a>
                                     </h2>
                                     <p style="margin-left: -61px;"><?= limit_words($deskripsi, 26) . '...'; ?></p>
 

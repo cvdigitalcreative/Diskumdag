@@ -1,449 +1,186 @@
+ <!--=================================
+wrapper -->
 
-
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Pengumuman
-        <small></small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Data Pengumuman</li>
-      </ol>
-    </section>
-
-    <!-- Main content -->
-    <section class="content">
+    <div class="content-wrapper">
+      <div class="page-title">
       <div class="row">
-        <div class="col-xs-12">
-          <div class="box">
-           
-          <div class="box">
-            <div class="box-header">
-              <a class="btn btn-success btn-flat" data-toggle="modal" data-target="#myModal"><span class="fa fa-plus"></span> Add Pengumuman</a>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-              <table id="example1" class="table table-striped" style="font-size:12px;">
+          <div class="col-sm-6">
+              <h4 class="mb-0">List Data Tulisan</h4>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right">
+              <li class="breadcrumb-item"><a href="<?php echo base_url()?>" class="default-color">Home</a></li>
+              <li class="breadcrumb-item active">List Data Tulisan</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-12 mb-30">     
+          <div class="card card-statistics h-100"> 
+            <div class="card-body">
+              <div class="col-xl-12 mb-10">
+                  <a href="<?php echo base_url()?>Admin/Pengumuman/add_tulisan" class="btn btn-primary btn-block ripple m-t-20">
+                      <i class="fa fa-plus pr-2"></i> Create New
+                  </a>
+                </div>
+              <div class="table-responsive">
+              <table id="datatable" class="table table-striped table-bordered p-0">
                 <thead>
-                <tr>
-					          <th style="width:70px;">#</th>
-                    <th>Judul</th>
-                    <th>Deskripsi</th>
-                    <th>Tanggal Post</th>
-                    <th>Author</th>
-                    <th style="text-align:right;">Aksi</th>
-                </tr>
+                  <tr>
+                      
+                      <th>Judul</th>
+                      <th>Tanggal</th>
+                      <th style=" width: 75px;">Author</th>                      
+                      <th style=" width: 65px;">Aksi</th>
+                  </tr>
                 </thead>
                 <tbody>
-				<?php
-					$no=0;
-  					foreach ($data->result_array() as $i) :
-  					   $no++;
-                       $id=$i['pengumuman_id'];
-                       $judul=$i['pengumuman_judul'];
-                       $deskripsi=$i['pengumuman_deskripsi'];
-                       $author=$i['pengumuman_author'];
-                       $tanggal=$i['tanggal'];
-                       
+                  <?php
+                    $no=0;
+                    foreach ($data->result_array() as $i) :
+                       $no++;
+                       $tulisan_id=$i['tulisan_id'];
+                       $tulisan_judul=$i['tulisan_judul'];
+                       $tanggal = $i['tanggal_pengumuman'];
+                       $tulisan_isi=$i['tulisan_isi'];
+                       $tulisan_tanggal=$i['tanggal'];
+                       $tulisan_author=$i['tulisan_author'];
+                       $tulisan_gambar=$i['tulisan_gambar'];
+                       $tulisan_views=$i['tulisan_views'];
+                   
                     ?>
+                
                 <tr>
-                  <td><?php echo $no;?></td>
-                  <td><?php echo $judul;?></td>
-                  <td><?php echo $deskripsi;?></td>
-                  <td><?php echo $tanggal;?></td>
-                  <td><?php echo $author;?></td>
-                  <td style="text-align:right;">
-                        <a class="btn" data-toggle="modal" data-target="#ModalEdit<?php echo $id;?>"><span class="fa fa-pencil"></span></a>
-                        <a class="btn" data-toggle="modal" data-target="#ModalHapus<?php echo $id;?>"><span class="fa fa-trash"></span></a>
-                  </td>
+              
+                    <td><?php echo $tulisan_judul;?></td>  
+                    <td><?php echo $tanggal ?></td>               
+                    <td><?php echo $tulisan_author;?></td>
+                    <td>
+                         <a href="<?php echo base_url().'Admin/Pengumuman/get_edit/'.$tulisan_id;?>" style="margin-right: 20px" ><span class="ti-pencil"></span></a>
+                         <a href="" data-toggle="modal" data-target="#ModalHapus<?php echo $tulisan_id;?>" ><span class="ti-trash"></span></a>
+                    </td>
                 </tr>
-				<?php endforeach;?>
-                </tbody>
-              </table>
+                <?php endforeach;?>    
+                </tbody>                
+            </table>
             </div>
-            <!-- /.box-body -->
+            </div>
           </div>
-          <!-- /.box -->
         </div>
-        <!-- /.col -->
+        
+        <?php foreach ($data->result_array() as $i) :
+             $tulisan_id=$i['tulisan_id'];
+              $tulisan_judul=$i['tulisan_judul'];
+              $tulisan_gambar=$i['tulisan_gambar'];
+        ?>
+        <div class="modal" tabindex="-1" role="dialog" id="ModalHapus<?php echo $tulisan_id;?>">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Delete a content</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body p-20">
+                        <form action="<?php echo base_url().'Admin/Pengumuman/hapus_tulisan'?>" method="post">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="hidden" name="kode" value="<?php echo $tulisan_id;?>"/> 
+                                    <p>Apakah kamu yakin ingin menghapus tulisan ini <b><i><?php echo $tulisan_judul;?></i></b></p>
+                                </div>
+                            </div>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger ripple" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success ripple save-category">Delete</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <?php endforeach;?> 
       </div>
-      <!-- /.row -->
-    </section>
-    <!-- /.content -->
+     
+      
+<!--=================================
+ wrapper -->
+      
+<!--=================================
+ footer -->
+
+    <footer class="bg-white p-4">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="text-center text-md-left">
+              <p class="mb-0"> &copy; Copyright <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span>. <a href="https://www.digitalcreative.web.id">  Warung Kreatif </a> All Rights Reserved. </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <ul class="text-center text-md-right">
+            <li class="list-inline-item"><a href="#">Terms & Conditions </a> </li>
+            <li class="list-inline-item"><a href="#">API Use Policy </a> </li>
+            <li class="list-inline-item"><a href="#">Privacy Policy </a> </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    </div><!-- main content wrapper end-->
   </div>
-  <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      <b>Version</b> 1.0
-    </div>
-     <strong>Copyright &copy; 2018 <a href="http://digitalcreative.web.id"> Warung Kreatif </a>.</strong> All rights reserved.
-  </footer>
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Create the tabs -->
-    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-      <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-    </ul>
-    <!-- Tab panes -->
-    <div class="tab-content">
-      <!-- Home tab content -->
-      <div class="tab-pane" id="control-sidebar-home-tab">
-        <h3 class="control-sidebar-heading">Recent Activity</h3>
-        <ul class="control-sidebar-menu">
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
-
-                <p>Will be 23 on April 24th</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-user bg-yellow"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
-
-                <p>New phone +1(800)555-1234</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
-
-                <p>nora@example.com</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-file-code-o bg-green"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
-
-                <p>Execution time 5 seconds</p>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <!-- /.control-sidebar-menu -->
-
-        <h3 class="control-sidebar-heading">Tasks Progress</h3>
-        <ul class="control-sidebar-menu">
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Custom Template Design
-                <span class="label label-danger pull-right">70%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Update Resume
-                <span class="label label-success pull-right">95%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Laravel Integration
-                <span class="label label-warning pull-right">50%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Back End Framework
-                <span class="label label-primary pull-right">68%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <!-- /.control-sidebar-menu -->
-
-      </div>
-      <!-- /.tab-pane -->
-      <!-- Stats tab content -->
-      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-      <!-- /.tab-pane -->
-      <!-- Settings tab content -->
-      <div class="tab-pane" id="control-sidebar-settings-tab">
-        <form method="post">
-          <h3 class="control-sidebar-heading">General Settings</h3>
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Report panel usage
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-
-            <p>
-              Some information about this general settings option
-            </p>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Allow mail redirect
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-
-            <p>
-              Other sets of options are available
-            </p>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Expose author name in posts
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-
-            <p>
-              Allow the user to show his name in blog posts
-            </p>
-          </div>
-          <!-- /.form-group -->
-
-          <h3 class="control-sidebar-heading">Chat Settings</h3>
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Show me as online
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Turn off notifications
-              <input type="checkbox" class="pull-right">
-            </label>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Delete chat history
-              <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
-            </label>
-          </div>
-          <!-- /.form-group -->
-        </form>
-      </div>
-      <!-- /.tab-pane -->
-    </div>
-  </aside>
-  <!-- /.control-sidebar -->
-  <!-- Add the sidebar's background. This div must be placed
-       immediately after the control sidebar -->
-  <div class="control-sidebar-bg"></div>
 </div>
-<!-- ./wrapper -->
+</div>
 
-<!--Modal Add Pengguna-->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><span class="fa fa-close"></span></span></button>
-                        <h4 class="modal-title" id="myModalLabel">Add Pengumuman</h4>
-                    </div>
-                    <form class="form-horizontal" action="<?php echo base_url().'admin/pengumuman/simpan_pengumuman'?>" method="post" enctype="multipart/form-data">
-                    <div class="modal-body">
-                                
-                            <div class="form-group">
-                                <label for="inputUserName" class="col-sm-4 control-label">Judul</label>
-                                <div class="col-sm-7">
-                                  <input type="text" name="xjudul" class="form-control" id="inputUserName" placeholder="Judul" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputUserName" class="col-sm-4 control-label">Deskripsi</label>
-                                <div class="col-sm-7">
-                                  <textarea class="form-control" rows="3" name="xdeskripsi" placeholder="Deskripsi ..." required></textarea>
-                                </div>
-                            </div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary btn-flat" id="simpan">Simpan</button>
-                    </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-		
-		
-		<?php foreach ($data->result_array() as $i) :
-                $id=$i['pengumuman_id'];
-                $judul=$i['pengumuman_judul'];
-                $deskripsi=$i['pengumuman_deskripsi'];
-                $author=$i['pengumuman_author'];
-                $tanggal=$i['tanggal'];
-            ?>
-	<!--Modal Edit Pengguna-->
-        <div class="modal fade" id="ModalEdit<?php echo $id;?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><span class="fa fa-close"></span></span></button>
-                        <h4 class="modal-title" id="myModalLabel">Edit Pengumuman</h4>
-                    </div>
-                    <form class="form-horizontal" action="<?php echo base_url().'admin/pengumuman/update_pengumuman'?>" method="post" enctype="multipart/form-data">
-                    <div class="modal-body">
-                                
-                            <div class="form-group">
-                                <label for="inputUserName" class="col-sm-4 control-label">Judul</label>
-                                <div class="col-sm-7">
-                                  <input type="hidden" name="kode" value="<?php echo $id;?>">
-                                  <input type="text" name="xjudul" class="form-control" value="<?php echo $judul;?>" id="inputUserName" placeholder="Judul" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputUserName" class="col-sm-4 control-label">Deskripsi</label>
-                                <div class="col-sm-7">
-                                  <textarea class="form-control" rows="3" name="xdeskripsi" placeholder="Deskripsi ..." required><?php echo $deskripsi;?></textarea>
-                                </div>
-                            </div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary btn-flat" id="simpan">Update</button>
-                    </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-	<?php endforeach;?>
-	
-	<?php foreach ($data->result_array() as $i) :
-                $id=$i['pengumuman_id'];
-                $judul=$i['pengumuman_judul'];
-                $deskripsi=$i['pengumuman_deskripsi'];
-                $author=$i['pengumuman_author'];
-                $tanggal=$i['tanggal'];
-            ?>
-	<!--Modal Hapus Pengguna-->
-        <div class="modal fade" id="ModalHapus<?php echo $id;?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><span class="fa fa-close"></span></span></button>
-                        <h4 class="modal-title" id="myModalLabel">Hapus Pengumuman</h4>
-                    </div>
-                    <form class="form-horizontal" action="<?php echo base_url().'admin/pengumuman/hapus_pengumuman'?>" method="post" enctype="multipart/form-data">
-                    <div class="modal-body">       
-							<input type="hidden" name="kode" value="<?php echo $id;?>"/> 
-                            <p>Apakah Anda yakin mau menghapus pengumuman <b><?php echo $judul;?></b> ?</p>
-                               
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary btn-flat" id="simpan">Hapus</button>
-                    </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-	<?php endforeach;?>
-	
-	
+<!--=================================
+ footer -->
 
 
-<!-- jQuery 2.2.3 -->
-<script src="<?php echo base_url().'assets/plugins/jQuery/jquery-2.2.3.min.js'?>"></script>
-<!-- Bootstrap 3.3.6 -->
-<script src="<?php echo base_url().'assets/bootstrap/js/bootstrap.min.js'?>"></script>
-<!-- DataTables -->
-<script src="<?php echo base_url().'assets/plugins/datatables/jquery.dataTables.min.js'?>"></script>
-<script src="<?php echo base_url().'assets/plugins/datatables/dataTables.bootstrap.min.js'?>"></script>
-<!-- SlimScroll -->
-<script src="<?php echo base_url().'assets/plugins/slimScroll/jquery.slimscroll.min.js'?>"></script>
-<script src="<?php echo base_url().'assets/plugins/datepicker/bootstrap-datepicker.js'?>"></script>
-<script src="<?php echo base_url().'assets/plugins/timepicker/bootstrap-timepicker.min.js'?>"></script>
-<script src="<?php echo base_url().'assets/plugins/daterangepicker/daterangepicker.js'?>"></script>
-<!-- FastClick -->
-<script src="<?php echo base_url().'assets/plugins/fastclick/fastclick.js'?>"></script>
-<!-- AdminLTE App -->
-<script src="<?php echo base_url().'assets/dist/js/app.min.js'?>"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="<?php echo base_url().'assets/dist/js/demo.js'?>"></script>
-<script type="text/javascript" src="<?php echo base_url().'assets/plugins/toast/jquery.toast.min.js'?>"></script>
-<!-- page script -->
-<script>
-  $(function () {
-    $("#example1").DataTable();
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false
-    });
+ 
+<!--=================================
+ jquery -->
 
-    $('#datepicker').datepicker({
-      autoclose: true,
-      format: 'yyyy-mm-dd'
-    });
-    $('#datepicker2').datepicker({
-      autoclose: true,
-      format: 'yyyy-mm-dd'
-    });
-    $('.datepicker3').datepicker({
-      autoclose: true,
-      format: 'yyyy-mm-dd'
-    });
-    $('.datepicker4').datepicker({
-      autoclose: true,
-      format: 'yyyy-mm-dd'
-    });
-    $(".timepicker").timepicker({
-      showInputs: true
-    });
+<!-- jquery -->
+<script src="<?php echo base_url()?>assets/admin/js/jquery-3.3.1.min.js"></script>
 
-  });
-</script>
+<!-- plugins-jquery -->
+<script src="<?php echo base_url()?>assets/admin/js/plugins-jquery.js"></script>
+
+<!-- plugin_path -->
+<script>var plugin_path = '<?php echo base_url()?>assets/admin/js/';</script>
+
+<!-- chart -->
+<script src="<?php echo base_url()?>assets/admin/js/chart-init.js"></script>
+
+<!-- calendar -->
+<script src="<?php echo base_url()?>assets/admin/js/calendar.init.js"></script>
+
+<!-- charts sparkline -->
+<script src="<?php echo base_url()?>assets/admin/js/sparkline.init.js"></script>
+
+<!-- charts morris -->
+<script src="<?php echo base_url()?>assets/admin/js/morris.init.js"></script>
+
+<!-- datepicker -->
+<script src="<?php echo base_url()?>assets/admin/js/datepicker.js"></script>
+
+<!-- sweetalert2 -->
+<script src="<?php echo base_url()?>assets/admin/js/sweetalert2.js"></script>
+
+<!-- toastr -->
+<script src="<?php echo base_url()?>assets/admin/js/toastr.js"></script>
+
+<!-- validation -->
+<script src="<?php echo base_url()?>assets/admin/js/validation.js"></script>
+
+<!-- lobilist -->
+<script src="<?php echo base_url()?>assets/admin/js/lobilist.js"></script>
+ 
+<!-- custom -->
+<script src="<?php echo base_url()?>assets/admin/js/custom.js"></script>
+
+<script src="<?php echo base_url().'assets/admin/js/jquery.toast.min.js'?>"></script>
+ 
+</body>
+</html>
 <?php if($this->session->flashdata('msg')=='error'):?>
         <script type="text/javascript">
                 $.toast({
@@ -461,7 +198,19 @@
         <script type="text/javascript">
                 $.toast({
                     heading: 'Success',
-                    text: "Pengumuman Berhasil disimpan ke database.",
+                    text: "Berita Berhasil disimpan ke database.",
+                    showHideTransition: 'slide',
+                    icon: 'success',
+                    hideAfter: false,
+                    position: 'bottom-right',
+                    bgColor: '#7EC857'
+                });
+        </script>
+     <?php elseif($this->session->flashdata('msg')=='warning'):?>
+        <script type="text/javascript">
+                $.toast({
+                    heading: 'Success',
+                    text: "Ukuran Foto terlalu besar.",
                     showHideTransition: 'slide',
                     icon: 'success',
                     hideAfter: false,
@@ -473,7 +222,7 @@
         <script type="text/javascript">
                 $.toast({
                     heading: 'Info',
-                    text: "Pengumuman berhasil di update",
+                    text: "Berita berhasil di update",
                     showHideTransition: 'slide',
                     icon: 'info',
                     hideAfter: false,
@@ -485,7 +234,7 @@
         <script type="text/javascript">
                 $.toast({
                     heading: 'Success',
-                    text: "Pengumuman Berhasil dihapus.",
+                    text: "Berita Berhasil dihapus.",
                     showHideTransition: 'slide',
                     icon: 'success',
                     hideAfter: false,
@@ -496,5 +245,3 @@
     <?php else:?>
 
     <?php endif;?>
-</body>
-</html>

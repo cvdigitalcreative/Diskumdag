@@ -297,8 +297,8 @@ html.sticky-header-active #header .header-body {
 .custom-countdown-style-1 > span {
 	text-align: center;
 	border-left: 1px solid #d7d7d7;
-	padding: 24px 32px;
-	padding: 1.5rem 2rem;
+	padding: 24px 0px;
+	padding: 1.5rem 0rem;
 }
 .custom-countdown-style-1 > span:first-child {
 	border-left: 0;
@@ -311,6 +311,11 @@ html.sticky-header-active #header .header-body {
 	margin-bottom: 0.5rem;
 }
 
+@media (max-width: 767px) {
+	.custom-countdown-style-1 > span:nth-child(3) {
+		border-left: 0;
+	}
+}
 @media (max-width: 575px) {
 	.custom-countdown-style-1 {
 		-webkit-box-orient: vertical;
@@ -321,6 +326,7 @@ html.sticky-header-active #header .header-body {
 	.custom-countdown-style-1 > span {
 		border-left: 0;
 		border-bottom: 1px solid #d7d7d7;
+		margin-bottom: 0 !important;
 	}
 	.custom-countdown-style-1 > span:last-child {
 		border-bottom: 0;

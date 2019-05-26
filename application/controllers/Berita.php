@@ -26,7 +26,8 @@ class Berita extends CI_Controller
     function ukm()
     {
         $y['title'] = 'Berita UKM';
-        $x['info'] = $this->m_tulisan->get_tulisan_by_kategori(4);
+        $x['info'] = $this->m_tulisan->get_tulisan_by_kategori(14);
+
         $this->load->view('v_header', $y);
         $this->load->view('v_berita', $x);
         $this->load->view('v_footer');
@@ -34,7 +35,7 @@ class Berita extends CI_Controller
     function koperasi()
     {
         $y['title'] = 'Berita Koperasi';
-        $x['info'] = $this->m_tulisan->get_tulisan_by_kategori(5);
+        $x['info'] = $this->m_tulisan->get_tulisan_by_kategori(15);
 
         $this->load->view('v_header', $y);
         $this->load->view('v_berita', $x);
@@ -43,7 +44,7 @@ class Berita extends CI_Controller
     function perdagangan()
     {
         $y['title'] = 'Berita perdagangan';
-        $x['info'] = $this->m_tulisan->get_tulisan_by_kategori(6);
+        $x['info'] = $this->m_tulisan->get_tulisan_by_kategori(16);
 
         $this->load->view('v_header', $y);
         $this->load->view('v_berita', $x);
@@ -53,7 +54,7 @@ class Berita extends CI_Controller
     function pk()
     {
         $y['title'] = 'Berita Wasdal PK';
-        $x['info'] = $this->m_tulisan->get_tulisan_by_kategori(7);
+        $x['info'] = $this->m_tulisan->get_tulisan_by_kategori(17);
 
         $this->load->view('v_header', $y);
         $this->load->view('v_berita', $x);
@@ -63,7 +64,7 @@ class Berita extends CI_Controller
     function upm()
     {
         $y['title'] = 'Berita Wasdal PK';
-        $x['info'] = $this->m_tulisan->get_tulisan_by_kategori(8);
+        $x['info'] = $this->m_tulisan->get_tulisan_by_kategori(18);
 
         $this->load->view('v_header', $y);
         $this->load->view('v_berita', $x);
@@ -72,7 +73,7 @@ class Berita extends CI_Controller
     function kukmp()
     {
         $y['title'] = 'Berita Wasdal PK';
-        $x['info'] = $this->m_tulisan->get_tulisan_by_kategori(9);
+        $x['info'] = $this->m_tulisan->get_tulisan_by_kategori(19);
 
         $this->load->view('v_header', $y);
         $this->load->view('v_berita', $x);
@@ -82,7 +83,7 @@ class Berita extends CI_Controller
     function ppukmp()
     {
         $y['title'] = 'Berita Wasdal PK';
-        $x['info'] = $this->m_tulisan->get_tulisan_by_kategori(10);
+        $x['info'] = $this->m_tulisan->get_tulisan_by_kategori(20);
 
         $this->load->view('v_header', $y);
         $this->load->view('v_berita', $x);

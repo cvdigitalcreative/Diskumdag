@@ -25,7 +25,7 @@ wrapper -->
         <div class="col-xl-8 mb-30">
             <div class="card card-statistics h-100"> 
                 <div class="card-body">
-                  <form  action="<?php echo base_url().'Admin/Tulisan/update_tulisan'?>" method="post" class="form-horizontal" enctype="multipart/form-data">
+                  <form  action="<?php echo base_url().'Admin/Pengumuman/update_tulisan'?>" method="post" class="form-horizontal" enctype="multipart/form-data">
                       <div class="form-group">
                           <label class="control-label" for="fname">First name</label>
                           <div class="mb-4">
@@ -41,36 +41,6 @@ wrapper -->
         <div class="col-xl-4 mb-30">
             <div class="card card-statistics h-51"> 
                 <div class="card-body">
-                  <div class="form-group">
-                    <label class="mr-sm-2" for="inlineFormCustomSelect">Kategori</label>
-                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="xkategori" required>
-                        <option selected value="">Choose...</option>
-                        <?php
-                          foreach ($kat->result_array() as $i) {
-                                       $kategori_id=$i['kategori_id'];
-                                       $kategori_nama=$i['kategori_nama'];
-                                       if($b['tulisan_kategori_id']==$kategori_id)
-                                          echo "<option value='$kategori_id' selected>$kategori_nama</option>";
-                                       else
-                                          echo "<option value='$kategori_id'>$kategori_nama</option>";
-                          }?>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                      <label class="mr-sm-2" for="inlineFormCustomSelect">Kategori Album Galeri</label>
-                      <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="xalbum">
-                          <option selected value="">Choose...</option>
-                           <?php
-                            foreach ($album->result_array() as $i) {
-                                         $album_id=$i['album_id'];
-                                         $album_nama=$i['album_nama'];
-                                         if($b['tulisan_album_id']==$album_id)
-                                            echo "<option value='$album_id' selected>$album_nama</option>";
-                                         else
-                                            echo "<option value='$album_id'>$album_nama</option>";
-                            }?>     
-                      </select>
-                  </div>
                   <div class="form-group">
                       <label for="exampleFormControlFile1">Upload Image</label>
                       <input type="file" class="form-control-file" id="exampleFormControlFile1" name="filefoto" >

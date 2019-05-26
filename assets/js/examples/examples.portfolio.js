@@ -1,7 +1,7 @@
 /*
 Name: 			Portfolio - Examples
 Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	7.0.0
+Theme Version:	7.4.0
 */
 (function($) {
 
@@ -477,14 +477,15 @@ Theme Version:	7.0.0
 		},
 		loadMore: function() {
 
-			var self = this;
+			var self = this,
+				ajax_url = ( self.$wrapper.data('ajax-url') ) ? self.$wrapper.data('ajax-url') : 'ajax/portfolio-ajax-load-more-';
 
 			self.$btn.hide();
 			self.$loader.addClass('portfolio-load-more-loader-showing').show();
 
 			// Ajax
 			$.ajax({
-				url: 'ajax/portfolio-ajax-load-more-' + (parseInt(self.currentPage)+1) + '.html',
+				url: ajax_url + (parseInt(self.currentPage)+1) + '.html',
 				complete: function(data) {
 
 					var $items = $(data.responseText);

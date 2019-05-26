@@ -33,6 +33,17 @@
           </ul>
         </li>
         <li>
+          <a href="javascript:void(0);" data-toggle="collapse" data-target="#Pengumuman">
+            <div class="pull-left"><i class="ti-files"></i><span class="right-nav-text">Pengumuman</span></div>
+            <div class="pull-right"><i class="ti-plus"></i></div><div class="clearfix"></div>
+          </a>
+          <ul id="Pengumuman" class="collapse" data-parent="#sidebarnav">
+            <li> <a href="<?php echo base_url()?>Admin/Pengumuman">List Pengumuman</a> </li>
+           <!--  <li> <a href="<?php echo base_url()?>Admin/Tulisan/add_tulisan">Form Add Tulisan</a> </li> -->
+            <li> <a href="<?php echo base_url()?>Admin/Album_pengumuman/">Album Pengumuman</a> </li>
+          </ul>
+        </li>
+        <li>
           <a href="javascript:void(0);" data-toggle="collapse" data-target="#galeri-menu">
             <div class="pull-left"><i class="ti-calendar"></i><span class="right-nav-text">Galeri</span></div>
             <div class="pull-right"><i class="ti-plus"></i></div><div class="clearfix"></div>

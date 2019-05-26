@@ -1,7 +1,7 @@
 /*
 Name: 			theme-shop.css
 Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	7.0.0
+Theme Version:	7.4.0
 */
 /* Custom Font - Stars (From WooCommerce) */
 @font-face {
@@ -339,50 +339,9 @@ Theme Version:	7.0.0
 
 /* Rating */
 .shop .review-num {
-	margin-left: 5px;
+	margin-left: 7px;
 	float: left;
-	position: relative;
-	top: -2px;
 	font-size: 0.85em;
-}
-
-.shop .star-rating {
-	float: left;
-	position: relative;
-	top: 4px;
-	font-family: 'star';
-	font-size: 1em;
-	height: 1.2em;
-	line-height: 1em;
-	overflow: hidden;
-	position: relative;
-	width: 5.4em;
-	margin-bottom: 25px;
-}
-
-.shop .star-rating:before {
-	color: #E0DADF;
-	content: "SSSSS";
-	float: left;
-	left: 0;
-	position: absolute;
-	top: 0;
-}
-
-.shop .star-rating span {
-	float: left;
-	left: 0;
-	overflow: hidden;
-	padding-top: 1.5em;
-	position: absolute;
-	top: 0;
-}
-
-.shop .star-rating span:before {
-	content: "SSSSS";
-	left: 0;
-	position: absolute;
-	top: 0;
 }
 
 .shop .summary .price {
@@ -390,7 +349,7 @@ Theme Version:	7.0.0
 	font-size: 2em;
 	letter-spacing: -1px;
 	line-height: 30px;
-	margin-top: 20px;
+	margin-top: 10px;
 	clear: both;
 }
 

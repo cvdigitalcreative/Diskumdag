@@ -1,10 +1,12 @@
 /*
 Name: 			Education
 Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	7.0.0
+Theme Version:	7.4.0
 */
 
 (function( $ ) {
+
+	'use strict';
 
 	/*
 	Slider
@@ -32,22 +34,6 @@ Theme Version:	7.0.0
 					enable: true
 				}
 			},
-		});
-	}
-
-	/*
-	Countdown
-	*/
-	if( $('#countdown').get(0) ) {
-		var countdown_date  = $('#countdown').data('countdown-date');
-
-		$('#countdown').countdown(countdown_date).on('update.countdown', function(event) {
-			var $this = $(this).html(event.strftime(
-				'<span class="days text-color-primary line-height-1"><span class="text-color-primary">%D</span> DAY%!d</span> '
-				+ '<span class="hours text-color-primary line-height-1"><span class="text-color-primary">%H</span> HOURS</span> '
-				+ '<span class="minutes text-color-primary line-height-1"><span class="text-color-primary">%M</span> MIN</span> '
-				+ '<span class="seconds text-color-primary line-height-1"><span class="text-color-primary">%S</span> SEC</span> '
-			));
 		});
 	}
 

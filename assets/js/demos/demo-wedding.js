@@ -1,10 +1,12 @@
 /*
 Name: 			Wedding
 Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	7.0.0
+Theme Version:	7.4.0
 */
 
 (function( $ ) {
+
+	'use strict';
 
 	/*
 	Slider
@@ -62,18 +64,6 @@ Theme Version:	7.0.0
 		failure: function() {
 			showLogo();	
 		}
-	});
-
-	/*
-	Countdown
-	*/
-	$('#clock').countdown('2020/12/10 12:00:00').on('update.countdown', function(event) {
-		var $this = $(this).html(event.strftime(''
-			+ '<span>%D<span>day%!d</span></span> '
-			+ '<span>%H<span>hours</span></span> '
-			+ '<span>%M<span>minutes</span></span> '
-			+ '<span>%S<span>seconds</span></span> '
-		));
 	});
 
 	/*

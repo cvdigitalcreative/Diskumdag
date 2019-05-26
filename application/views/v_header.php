@@ -21,8 +21,8 @@
 		<meta name="author" content="okler.net">
 
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="<?php echo base_url() ?>assets/img/favicon.ico" type="image/x-icon" />
-		<link rel="apple-touch-icon" href="<?php echo base_url() ?>assets/img/apple-touch-icon.png">
+		<link rel="shortcut icon" href="<?php echo base_url() ?>assets/images/logo2.png" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="<?php echo base_url() ?>assets/images/logo2.png">
 
 		<!-- Mobile Metas -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
@@ -61,13 +61,10 @@
 
 		<!-- Head Libs -->
 		<script src="<?php echo base_url() ?>assets/vendor/modernizr/modernizr.min.js"></script>
-		<style type="text/css">
-			
 		
-		</style>
 
 	</head>
-	<body style="background-color: #f9f6f5">
+	<body bgcolor="#E6E6FA">
 
 		<div class="body">
 			<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}">
@@ -78,7 +75,7 @@
 								<div class="header-row">
 									<div class="header-logo">
 										<a href="index.html">
-											<img alt="Porto" width="100" height="48" data-sticky-width="82" data-sticky-height="40" src="<?php echo base_url() ?>assets/img/logo.png">
+											<img alt="Porto" width="50" height="48" data-sticky-width="57" data-sticky-height="48" src="<?php echo base_url() ?>assets/images/logo2.png">
 										</a>
 									</div>
 								</div>
@@ -148,7 +145,6 @@
 															Pengumuman
 														</a>
 													</li>
-													
 													<li class="dropdown">
 														<a class="dropdown-item dropdown-toggle " href="<?=base_url()?>Berita">
 															Berita
@@ -190,24 +186,21 @@
 																</a>
 															</li>
 														</ul>
-													</li>
-
-													<li class="dropdown">
-														<a class="dropdown-item dropdown-toggle" href="<?=base_url()?>Info">
-															Info Grafis
-														</a>
-													</li>
-													<li class="dropdown">
-														<a class="dropdown-item dropdown-toggle" href="<?=base_url()?>Info/download">
-															Download
-														</a>
-													</li>
-													<li class="dropdown">
-														<a class="dropdown-item dropdown-toggle" href="<?=base_url()?>Kontak">
-															Kontak
-														</a>
-													</li>
-													
+															<li class="dropdown">
+																<a class="dropdown-item dropdown-toggle" href="<?=base_url()?>Info">
+																	Info Grafis
+																</a>
+															</li>
+															<li class="dropdown">
+																<a class="dropdown-item dropdown-toggle" href="<?=base_url()?>Info/download">
+																	Download
+																</a>
+															</li>
+															<li class="dropdown">
+																<a class="dropdown-item dropdown-toggle" href="<?=base_url()?>Kontak">
+																	Kontak
+																</a>
+															</li>
 													</li>
 												</ul>
 											</nav>
@@ -231,11 +224,10 @@
 					</div>
 				</div>
 			</header>
-
-
+		</div>
 
 <div role="main" class="main">
-				<section class="section section-default bg-color-dark border-top-0" style="height:500px;max-height: 800px;margin-top: 0px;background-image: url(<?php echo base_url() ?>assets/images/background-kota-blur-5.jpg);background-repeat: no-repeat;background-position: center;">
+				<section class="section section-default bg-color-dark border-top-0" style="height:580px;max-height: 800px;margin-top: 0px;background-image: url(<?php echo base_url() ?>assets/images/background-kota-blur-5.jpg);background-repeat: no-repeat;background-position: center;">
 					<div class="container">
 						<div class="row">
 							<div class="col">
@@ -253,6 +245,7 @@
 							</div>
 						</div>
 					</div>
-				</section>
-</div>
+				</div>
+			</section>
+	
 

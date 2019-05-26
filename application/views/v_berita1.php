@@ -35,16 +35,16 @@
                                 <div class="col-md-4">
                                     <article class="post post-medium border-0 pb-0 mb-5">
                                         <div class="post-image">
-                                            <a href="blog-post.html">
+                                            <a href="<?php base_url() ?>Berita/detail/<?php echo $i['tulisan_slug']; ?>">
                                                 <img src="<?= base_url() ?>\assets\images\<?= $gambar ?>" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="" />
-                                            </a>
+                                            
                                         </div>
 
                                         <div class="post-content">
 
-                                            <h2 class="font-weight-semibold text-5 line-height-6 mt-3 mb-2"><a href="blog-post.html"><?= $judul ?></a></h2>
+                                            <h2 class="font-weight-semibold text-5 line-height-6 mt-3 mb-2"><?= $judul ?></h2>
                                             <p><?= limit_words($deskripsi, 23) . '...'; ?></p>
-
+                                            </a>
                                             <div class="post-meta">
 
                                                 <span class="d-block mt-2"><a href="<?= base_url() ?>" class="btn btn-xs btn-light text-1 text-uppercase">Read More</a></span>

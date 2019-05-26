@@ -18,8 +18,7 @@
 			$this->load->view('v_footer');
 		}
 
-		function detail()
-		{
+		function detail(){
 		    $y['title'] = "Dinas UKM dan Perdagangan-Pengumuan";
 		    $slug = $this->uri->segment(3);	   
 		    $link=$this->uri->segment(4);

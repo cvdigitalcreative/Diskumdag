@@ -56,9 +56,8 @@ class Tulisan extends CI_Controller{
 	                        $config['source_image']='./assets/images/'.$gbr['file_name'];
 	                        $config['create_thumb']= FALSE;
 	                        $config['maintain_ratio']= FALSE;
-	                        $config['quality']= '100%';
-	                        // $config['width']= 560;
-	                        // $config['height']= 510;
+	                        $config['quality']= '80%';
+	                        $config['max_size'] = 4000;
 	                        $config['new_image']= './assets/images/'.$gbr['file_name'];
 	                        $this->load->library('image_lib', $config);
 	                        $this->image_lib->resize();
@@ -93,7 +92,29 @@ class Tulisan extends CI_Controller{
 	                }
 	                 
 	            }else{
-					redirect('Admin/Tulisan');
+							$judul=strip_tags($this->input->post('xjudul'));
+							$filter=str_replace("?", "", $judul);
+							$filter2=str_replace("$", "", $filter);
+							$filter3=str_replace("(", "", $filter2);
+							$filter4=str_replace(")", "", $filter3);
+							$slug=strtolower(str_replace(" ", "-", $filter4));
+							$isi=$this->input->post('xisi');
+							$kategori_id=strip_tags($this->input->post('xkategori'));
+							$data=$this->m_kategori->get_kategori_byid($kategori_id);
+							$q=$data->row_array();
+							$kategori_nama=$q['kategori_nama'];
+							$album_id=strip_tags($this->input->post('xalbum'));
+							$data1=$this->m_album->get_album_by_kode($album_id);
+							$q=$data1->row_array();
+							$album_nama=$q['album_nama'];
+							$kode=$this->session->userdata('idadmin');
+							$user=$this->m_pengguna->get_pengguna_login($kode);
+							$p=$user->row_array();
+							$user_id=$p['pengguna_id'];
+							$user_nama=$p['pengguna_nama'];
+							$this->m_tulisan->simpan_tulisan($judul,$isi,$kategori_id,$kategori_nama,$album_id,$album_nama,$user_id,$user_nama,$slug);
+							echo $this->session->set_flashdata('msg','success');
+							redirect('Admin/Tulisan');
 				}
 				
 	}

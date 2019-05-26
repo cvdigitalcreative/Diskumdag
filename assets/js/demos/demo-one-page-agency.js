@@ -1,7 +1,7 @@
 /*
 Name: 			One Page Agency
 Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	7.0.0
+Theme Version:	7.4.0
 */
 
 (function( $ ) {
@@ -99,7 +99,7 @@ Theme Version:	7.0.0
 	var loadMore = {
 
 		pages: 0,
-		currentPage: 0,
+		currentPage: 1,
 		$wrapper: $('#loadMoreWrapper'),
 		$btn: $('#loadMore'),
 		$btnWrapper: $('#loadMoreBtnWrapper'),
@@ -149,7 +149,7 @@ Theme Version:	7.0.0
 
 			// Ajax
 			$.ajax({
-				url: 'ajax/demo-one-page-agency-ajax-load-more.html',
+				url: 'ajax/demo-one-page-agency-ajax-load-more-' + (parseInt(self.currentPage)+1) + '.html',
 				complete: function(data) {
 
 					var $items = $(data.responseText);

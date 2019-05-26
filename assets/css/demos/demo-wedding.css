@@ -262,46 +262,43 @@
 	color: #ef3447 !important;
 }
 
-.wedding-countdown #clock span {
+.custom-countdown-style-1 > span {
 	position: relative;
-	padding: 0 30px;
-	font-size: 4em;
 	font-weight: 100;
 }
-.wedding-countdown #clock span:before {
+.custom-countdown-style-1 > span:before {
 	content: '\f004';
 	display: block;
 	font-family: 'Font Awesome 5 Free';
 	position: absolute;
-	top: 60%;
+	top: 50%;
 	left: -5px;
-	font-size: 0.2em;
+	font-size: 11.2px;
+	font-size: 0.7rem;
 	color: #5fc3d2;
 	line-height: 0;
 	-webkit-transform: translateY(-50%);
 					transform: translateY(-50%);
 }
-.wedding-countdown #clock span:nth-child(1):before {
+.custom-countdown-style-1 > span:nth-child(1):before {
 	content: none;
 }
-.wedding-countdown #clock span > span {
-	position: absolute;
-	bottom: -15px;
-	left: 50%;
-	font-size: 0.3em;
-	text-align: center;
-	text-transform: uppercase;
-	-webkit-transform: translateX(-50%);
-					transform: translateX(-50%);
-}
-.wedding-countdown #clock span > span:before, .wedding-countdown #clock span > span:after {
-	content: none;
+.custom-countdown-style-1 > span > span {
+	font-size: 62.4px;
+	font-size: 3.9rem;
 }
 
 @media (max-width: 767px) {
-	.wedding-countdown #clock span {
+	.custom-countdown-style-1 > span {
 		padding: 0 15px;
-		font-size: 2.5em;
+	}
+	.custom-countdown-style-1 > span:nth-child(3):before {
+		content: none;
+	}
+}
+@media (max-width: 575px) {
+	.custom-countdown-style-1 > span:before {
+		content: none;
 	}
 }
 .testimonials .testimonial blockquote:before, .testimonials .testimonial blockquote:after {

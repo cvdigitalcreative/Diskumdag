@@ -10,6 +10,6 @@ class Kontak extends CI_Controller
 
         $this->load->view('v_header',$y);
         $this->load->view('v_kontak');
-        
+        $this->load->view('v_footer');	
     }
 }

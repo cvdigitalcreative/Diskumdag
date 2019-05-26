@@ -74,7 +74,7 @@
 							<div class="header-column">
 								<div class="header-row">
 									<div class="header-logo">
-										<a href="index.html">
+										<a href="<?=base_url()?>">
 											<img alt="Porto" width="50" height="48" data-sticky-width="57" data-sticky-height="48" src="<?php echo base_url() ?>assets/images/logo2.png">
 										</a>
 									</div>

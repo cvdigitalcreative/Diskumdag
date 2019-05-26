@@ -21,7 +21,6 @@
     </div>
 </section>
 
-<div class="container py-4">
     <?php
     foreach ($info->result_array() as $i) {
         $gambar = $i['tulisan_gambar'];
@@ -31,14 +30,14 @@
         $tanggal=$i['tulisan_tanggal'];
 
         ?>
+<div class="container">
+	<div class="row mt-4 mb-6">
+		<div class="col">
+			<div class="col-lg-9 order-1 order-lg-2">
 
-        <div class="row">
-            <div class="col-md-12">
-                <div class="blog-posts">
-
-                    <article class="post post-large">
-                        <div class="post-image">
-                            <a href="blog-post.html">
+                    <article class="">
+                        <div class="">
+                            <a href="">
                                 <img src="<?= base_url() ?>\assets\images\<?= $gambar ?>" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="" />
                             </a>
                         </div>
@@ -46,13 +45,13 @@
 
                         <div class="post-content">
 
-                            <h2 class="font-weight-semibold text-6 line-height-3 mb-3">
-                                <a style="    margin-left: -61px;"
+                            <h2 class="font-weight-semibold text-6 line-height-3 mb-3 mt-3">
+                                <a style=" "
                                 href=""><?= $judul ?></a>
                             </h2>
                             <div class="post-meta" >
                                 <div>
-                                    <p style="margin-left: -61px;"><?= $tanggal ?></p>
+                                    <p style=""><?= $tanggal ?></p>
                                 </div>
 
                             </div>

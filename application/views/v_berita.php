@@ -26,7 +26,6 @@
             </div>
         </section>
 
-        <div class="container py-4">
             <?php
             foreach ($info->result_array() as $i) {
                 $gambar = $i['tulisan_gambar'];
@@ -34,15 +33,18 @@
                 $deskripsi = $i['tulisan_isi'];
                 $slug=$i['tulisan_slug'];
 
-                ?>
+               
+               ?>
 
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="blog-posts">
+<div class="container">
+	<div class="row mt-4 mb-6">
+		<div class="col">
+			<div class="col-lg-9 order-1 order-lg-2">
 
-                            <article class="post post-large">
-                                <div class="post-image">
-                                    <a href="blog-post.html">
+                    <article class="">
+                        <div class="">
+                            <a href="">
+
                                         <img src="<?= base_url() ?>\assets\images\<?= $gambar ?>" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="" />
                                     </a>
                                 </div>
@@ -51,16 +53,16 @@
                                 <div class="post-content">
 
                                     <h2 class="font-weight-semibold text-6 line-height-3 mb-3">
-                                        <a style="    margin-left: -61px;"
+                                        <a style=""
                                         href="<?php echo base_url()?>Berita/detail/<?=$slug?>"><?= $judul ?></a>
                                     </h2>
                                     <p style="margin-left: -61px;"><?= limit_words($deskripsi, 26) . '...'; ?></p>
 
                                     <div class="post-meta" >
                                         <div>
-                                            <p style="margin-left: -61px;"><?= $tanggal ?></p>
+                                            <p style=""><?= $tanggal ?></p>
                                         </div>
-                                        <div><a href="" style="margin-left: -61px;">Read More</a></div>
+                                        <div><a href="<?php echo base_url()?>Berita/detail/<?=$slug?>" style="">Read More</a></div>
                                     </div>
 
                                 </div>

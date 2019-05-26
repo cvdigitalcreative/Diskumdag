@@ -9,6 +9,19 @@ class Berita extends CI_Controller
 
         $this->load->model('m_galeri');
         $this->load->model('m_album');
+        $this->load->model('m_berita');
+        
+    }
+
+    function index()
+    {
+        $y['title'] = 'Berita';
+        $x['info'] = $this->m_galeri->get_galeri_home();
+
+        $this->load->view('v_header', $y);
+        $this->load->view('v_berita1', $x);
+        $this->load->view('v_footer');
+        
     }
 
 
@@ -84,5 +97,20 @@ class Berita extends CI_Controller
         $this->load->view('v_berita', $x);
         $this->load->view('v_footer');
         
+    }
+  
+
+    function detail()
+    {
+        $y['title'] = "Dinas UKM dan Perdagangan-Pengumuan";
+        $slug = $this->uri->segment(3);	   
+        $link=$this->uri->segment(4);
+        $x['data'] = $this->m_berita->get_join_table($slug);
+        $x['link_before']=$this->m_berita->get_link_before($link);
+        $x['link_after']=$this->m_berita->get_link_after($link);
+        $this->load->view('v_header',$y);
+        $this->load->view('v_detail_pengumuman',$x);
+        $this->load->view('v_footer');
+
     }
 }

@@ -1,3 +1,11 @@
+<?php
+            error_reporting(0);
+            function limit_words($string, $word_limit){
+                $words = explode(" ",$string);
+                return implode(" ",array_splice($words,0,$word_limit));
+            }
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -6,7 +14,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
 
-		<title><?=$title?></title>	
+		<title><?php echo $title ?></title>	
 
 		<meta name="keywords" content="HTML5 Template" />
 		<meta name="description" content="Porto - Responsive HTML5 Template">
@@ -53,9 +61,13 @@
 
 		<!-- Head Libs -->
 		<script src="<?php echo base_url() ?>assets/vendor/modernizr/modernizr.min.js"></script>
+		<style type="text/css">
+			
+		
+		</style>
 
 	</head>
-	<body>
+	<body style="background-color: #f9f6f5">
 
 		<div class="body">
 			<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}">
@@ -78,20 +90,67 @@
 											<nav class="collapse">
 												<ul class="nav nav-pills" id="mainNav">
 													<li class="dropdown">
-														<a class="dropdown-item dropdown-toggle " href="">
-															Beranda
+														<a class="dropdown-item dropdown-toggle active" href="<?php echo base_url().'Home' ?>">
+															Home
+														</a>
+													</li>
+													<li class="dropdown">
+														<a class="dropdown-item dropdown-toggle" href="#">
+															Profil
 														</a>
 														<ul class="dropdown-menu">
 															<li>
-																<a class="dropdown-item" href="index.html">
-																	Landing Page
+																<a class="dropdown-item" href="<?php echo base_url() ?>Visi">
+																	Visi Misi
+																</a>
+															</li>
+															<li>
+																<a class="dropdown-item" href="<?php echo base_url() ?>Visi/struktur">
+																	Struktur Organisasi
+																</a>
+															</li>
+															<li>
+																<a class="dropdown-item" href="<?php echo base_url() ?>Visi/tugas">
+																	Tugas Pokok
+																</a>
+															</li>
+															<li>
+																<a class="dropdown-item" href="<?php echo base_url() ?>Visi/pejabat">
+																	Pejabat Dinas KUKMP
 																</a>
 															</li>
 														</ul>
 													</li>
-
 													<li class="dropdown">
-														<a class="dropdown-item dropdown-toggle " href="">
+														<a class="dropdown-item dropdown-toggle" href="#">
+															Pelayanan
+														</a>
+														<ul class="dropdown-menu">
+															<li>
+																<a class="dropdown-item" href="<?php echo base_url() ?>Pelayanan">
+																	Pelayanan Koperasi dan UKM
+																</a>
+															</li>
+															<li>
+																<a class="dropdown-item" href="<?php echo base_url() ?>Pelayanan/perdagangan">
+																	Pelayanan Perdagangan
+																</a>
+															</li>
+															<li>
+																<a class="dropdown-item" href="<?php echo base_url() ?>Pelayanan/metrologi">
+																	Pelayanan Metrologi
+																</a>
+															</li>
+														</ul>
+													</li>
+													<li class="menu">
+														<a class="dropdown-item dropdown-toggle" href="<?php echo base_url() ?>Pengumuman">
+															Pengumuman
+														</a>
+													</li>
+													
+													<li class="dropdown">
+														<a class="dropdown-item dropdown-toggle " href="<?=base_url()?>Berita">
 															Berita
 														</a>
 														<ul class="dropdown-menu">
@@ -148,6 +207,7 @@
 															Kontak
 														</a>
 													</li>
+													
 													</li>
 												</ul>
 											</nav>
@@ -171,3 +231,28 @@
 					</div>
 				</div>
 			</header>
+
+
+
+<div role="main" class="main">
+				<section class="section section-default bg-color-dark border-top-0" style="height:500px;max-height: 800px;margin-top: 0px;background-image: url(<?php echo base_url() ?>assets/images/background-kota-blur-5.jpg);background-repeat: no-repeat;background-position: center;">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<div class="post-image">
+									<div class="col-lg-12 text-center mt-3">
+										<a href="<?php echo base_url() ?>">
+											<img src="<?php echo base_url() ?>assets/images/LOGO KOTA PALEMBANG1.png" class="img-fluid img-thumbnail-no-borders rounded-0" alt="LOGO KOTA PALEMBANG" />
+										</a>
+								</div>
+								<div class="col-md-6 col-lg-12 order-2 text-center">
+								<p class="mb-0 font-weight-bold text-color-light text-7 text-center mt-4 mb-4">Dinas Koperasi UKM serta Perdagangan Provinsi Sumatera Selatan</p>  
+								<hr class="text-center" style="background-color: #666;position: center; margin-bottom: 6px;">
+								<p class="mb-1 text-center">Pembinaan Pemberdayaan Koperasi UKM serta Perdagangan</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+</div>
+

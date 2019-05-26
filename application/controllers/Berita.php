@@ -27,7 +27,6 @@ class Berita extends CI_Controller
     {
         $y['title'] = 'Berita UKM';
         $x['info'] = $this->m_tulisan->get_tulisan_by_kategori(4);
-
         $this->load->view('v_header', $y);
         $this->load->view('v_berita', $x);
         $this->load->view('v_footer');

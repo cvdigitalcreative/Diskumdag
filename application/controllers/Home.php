@@ -10,7 +10,7 @@
 		}
 
 		function index(){
-			$y['title'] = "Diskumdag";
+			$y['title'] = "Warung Kreatif";
 			$x['header'] = $this->m_galeri->get_galeri_by_album_id(4);
 			$x['layanan'] = $this->m_galeri->get_galeri_by_album_id(5);
 			$x['foto_layanan'] = $this->m_galeri->get_galeri_by_album_id(6);

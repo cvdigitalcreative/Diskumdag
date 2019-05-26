@@ -66,12 +66,12 @@ class M_galeri extends CI_Model{
 		
         $hsl = $this->db->query("DELETE from tbl_video where video_id='$kode'");
         return $hsl;
-       
+      
 	}
 
 	//Front-End
 	function get_galeri_home(){
-		$hsl=$this->db->query("SELECT tbl_galeri.*,DATE_FORMAT(galeri_tanggal,'%d/%m/%Y') AS tanggal,album_nama FROM tbl_galeri join tbl_album on galeri_album_id=album_id ORDER BY galeri_id DESC limit 6");
+		$hsl=$this->db->query("SELECT tbl_galeri.*,DATE_FORMAT(galeri_tanggal,'%d/%m/%Y') AS tanggal,album_nama FROM tbl_galeri join tbl_album on galeri_album_id=album_id ORDER BY galeri_id DESC limit 4");
 		return $hsl;
 	}
 

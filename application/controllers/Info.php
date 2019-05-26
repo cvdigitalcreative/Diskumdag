@@ -8,6 +8,7 @@ class Info extends CI_Controller
         parent::__construct();
 
         $this->load->model('m_galeri');
+        $this->load->model('m_kontak');
     }
     function index()
     { 
@@ -23,5 +24,15 @@ class Info extends CI_Controller
 
         $this->load->view('v_header',$y);
         $this->load->view('v_download');
+    }
+    function pesan()
+    {
+        $y['title']='Kontak';
+        $nama=$this->input->post('nama');
+        $email=$this->input->post('email');
+        $pesan=$this->input->post('pesan');
+        $this->m_kontak->kirim_pesan($nama,$email,$pesan);
+        $this->load->view('v_header',$y);
+        $this->load->view('v_kontak');
     }
 }

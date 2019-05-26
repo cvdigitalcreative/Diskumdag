@@ -9,36 +9,25 @@
             <p class="mb-0 appear-animation animated maskUp appear-animation-visible" data-appear-animation="maskUp" data-appear-animation-delay="400" style="animation-delay: 400ms;">Tanyakan pertanyaan apapun!</p>
         </div>
 
-        <form id="contactForm" class="contact-form appear-animation animated fadeIn appear-animation-visible" action="php/contact-form.php" method="POST" data-appear-animation="fadeIn" data-appear-animation-delay="600" novalidate="novalidate" style="animation-delay: 600ms;">
-            <div class="contact-form-success alert alert-success d-none mt-4" id="contactSuccess">
-                <strong>Success!</strong> Your message has been sent to us.
-            </div>
-
-            <div class="contact-form-error alert alert-danger d-none mt-4" id="contactError">
-                <strong>Error!</strong> There was an error sending your message.
-                <span class="mail-error-message text-1 d-block" id="mailErrorMessage"></span>
-            </div>
+        <form  class="contact-form appear-animation animated fadeIn appear-animation-visible" 
+        action="<?=base_url()?>Info/pesan" method="POST" data-appear-animation="fadeIn" data-appear-animation-delay="600" novalidate="novalidate" style="animation-delay: 600ms;">
+        <?php echo $this->session->flashdata('msg')?>
 
             <div class="form-row">
                 <div class="form-group col-lg-6">
                     <label class="required font-weight-bold text-dark">Nama Lengkap</label>
-                    <input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="name" id="name" required="">
+                    <input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="nama"  required>
                 </div>
                 <div class="form-group col-lg-6">
                     <label class="required font-weight-bold text-dark">Alamat email</label>
-                    <input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email" required="">
+                    <input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email"  required>
                 </div>
             </div>
-            <div class="form-row">
-                <div class="form-group col">
-                    <label class="font-weight-bold text-dark">Judul</label>
-                    <input type="text" value="" data-msg-required="Please enter the subject." maxlength="100" class="form-control" name="subject" id="subject" required="">
-                </div>
-            </div>
+
             <div class="form-row">
                 <div class="form-group col">
                     <label class="required font-weight-bold text-dark">Pesan</label>
-                    <textarea maxlength="5000" data-msg-required="Please enter your message." rows="8" class="form-control" name="message" id="message" required=""></textarea>
+                    <textarea maxlength="5000" data-msg-required="Please enter your message." rows="8" class="form-control" name="message" id="message" required></textarea>
                 </div>
             </div>
             <div class="form-row">

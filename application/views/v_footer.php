@@ -1,4 +1,23 @@
-	<!-- Vendor -->
+</div></div></div></div></div></div>
+</div>
+<footer id="footer" class="mt-0">
+						<div class="footer-copyright">
+							<div class="container py-2">
+								<div class="row py-4">
+									<div class="col text-center">
+										<ul class="footer-social-icons social-icons social-icons-clean social-icons-icon-light mb-3">
+											<li class="social-icons-facebook"><a href="https://www.facebook.com/dwianekateknik.dwianekateknik" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+										<li class="social-icons-twitter"><a href="https://twitter.com/trainingk3dwi?s=09" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+										<li class="social-icons-instagram"><a href="https://instagram.com/trainingk3dwi?igshid=sdk575yqn4xj" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+										</ul>
+										<p><a target="blank" href="digitalcreative.web.id"><strong>Digital Creative</strong></a> - © Copyright 2018. All Rights Reserved.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</footer>
+
+<!-- Vendor -->
 		<script src="<?php echo base_url() ?>assets/vendor/jquery/jquery.min.js"></script>
 		<script src="<?php echo base_url() ?>assets/assets/vendor/jquery.appear/jquery.appear.min.js"></script>
 		<script src="<?php echo base_url() ?>assets/vendor/jquery.easing/jquery.easing.min.js"></script>

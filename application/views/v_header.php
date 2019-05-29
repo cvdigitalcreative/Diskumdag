@@ -75,7 +75,7 @@
 								<div class="header-row">
 									<div class="header-logo">
 										<a href="<?=base_url()?>">
-											<img alt="Porto" width="50" height="48" data-sticky-width="57" data-sticky-height="48" src="<?php echo base_url() ?>assets/images/Logo Sumsel.png">
+											<img alt="Porto" width="50px" height="48" data-sticky-width="57" data-sticky-height="48" src="<?php echo base_url() ?>assets/images/Logo Sumsel.png">
 										</a>
 									</div>
 								</div>
@@ -239,7 +239,7 @@
 								<div class="post-image">
 									<div class="col-lg-12 text-center mt-3">
 										<a href="<?php echo base_url() ?>">
-											<img src="<?php echo base_url() ?>assets/images/Logo Sumsel.png" class="img-fluid img-thumbnail-no-borders rounded-0" alt="Logo Sumsel" />
+											<img src="<?php echo base_url() ?>assets/images/Logo Sumsel.png" class="" style="max-width: 35%;" alt="Logo Sumsel" />
 										</a>
 								</div>
 								<div class="col-md-6 col-lg-12 order-2 text-center">

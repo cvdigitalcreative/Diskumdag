@@ -11,7 +11,7 @@
 		}
 
 		function index(){
-			$y['title'] = "Dinas UKM dan Perdagangan";
+			$y['title'] = "DINAS KOPERASI DAN UKM PROVINSI SUMATERA SELATAN";
 			$x['slider'] = $this->m_tulisan->get_tulisan_by_kategori(2);
 			$x['pengumuman'] = $this->m_pengumuman->get_all_pengumuman_by_tanggal();
 			$x['berita'] = $this->m_tulisan->get_tulisan_by_kategori(4);
@@ -23,7 +23,7 @@
 		}
 
 		function pengumuman(){
-			$y['title'] = "Dina UKM dan Perdagangan-Pengumuman";
+			$y['title'] = "DINAS KOPERASI DAN UKM PROVINSI SUMATERA SELATAN";
 			$x['pengumuman'] = $this->m_pengumuman->get_all_pengumuman();
 			$this->load->view('v_header',$y);
 			$this->load->view('v_pengumuman',$x);

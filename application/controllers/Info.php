@@ -16,6 +16,7 @@ class Info extends CI_Controller
         $x['info'] = $this->m_galeri->get_galeri_by_album_id(1);
         $this->load->view('v_header',$y);
         $this->load->view('v_infografis',$x);
+        $this->load->view('v_footer');	
         
     }
     function download()
@@ -24,6 +25,7 @@ class Info extends CI_Controller
 
         $this->load->view('v_header',$y);
         $this->load->view('v_download');
+        $this->load->view('v_footer');	
     }
     function pesan()
     {
@@ -34,5 +36,7 @@ class Info extends CI_Controller
         $this->m_kontak->kirim_pesan($nama,$email,$pesan);
         $this->load->view('v_header',$y);
         $this->load->view('v_kontak');
+        $this->load->view('v_footer');	
     }
+  
 }

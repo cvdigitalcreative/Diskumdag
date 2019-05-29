@@ -14,15 +14,15 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
 
-		<title><?php echo $title ?></title>	
+		<title>DINAS KOPERASI DAN UKM PROVINSI SUMATERA SELATAN</title>	
 
 		<meta name="keywords" content="HTML5 Template" />
 		<meta name="description" content="Porto - Responsive HTML5 Template">
 		<meta name="author" content="okler.net">
 
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="<?php echo base_url() ?>assets/images/logo2.png" type="image/x-icon" />
-		<link rel="apple-touch-icon" href="<?php echo base_url() ?>assets/images/logo2.png">
+		<link rel="shortcut icon" href="<?php echo base_url() ?>assets/images/Logo Sumsel.png" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="<?php echo base_url() ?>assets/images/Logo Sumsel.png">
 
 		<!-- Mobile Metas -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
@@ -75,7 +75,7 @@
 								<div class="header-row">
 									<div class="header-logo">
 										<a href="<?=base_url()?>">
-											<img alt="Porto" width="50" height="48" data-sticky-width="57" data-sticky-height="48" src="<?php echo base_url() ?>assets/images/logo2.png">
+											<img alt="Porto" width="50" height="48" data-sticky-width="57" data-sticky-height="48" src="<?php echo base_url() ?>assets/images/Logo Sumsel.png">
 										</a>
 									</div>
 								</div>
@@ -141,7 +141,7 @@
 														</ul>
 													</li>
 													<li class="menu">
-														<a class="dropdown-item dropdown-toggle" href="<?php echo base_url() ?>Pengumuman">
+														<a class="" href="<?php echo base_url() ?>Pengumuman">
 															Pengumuman
 														</a>
 													</li>
@@ -187,18 +187,23 @@
 															</li>
 														</ul>
 															<li class="dropdown">
-																<a class="dropdown-item dropdown-toggle" href="<?=base_url()?>Info">
+																<a class="" href="<?=base_url()?>Info">
 																	Info Grafis
 																</a>
 															</li>
 															<li class="dropdown">
-																<a class="dropdown-item dropdown-toggle" href="<?=base_url()?>Info/download">
+																<a class="" href="<?=base_url()?>Info/download">
 																	Download
 																</a>
 															</li>
 															<li class="dropdown">
-																<a class="dropdown-item dropdown-toggle" href="<?=base_url()?>Kontak">
+																<a class="" href="<?=base_url()?>Kontak">
 																	Kontak
+																</a>
+															</li>
+															<li class="dropdown">
+																<a class="" href="<?=base_url()?>Galeri">
+																	Galeri
 																</a>
 															</li>
 													</li>
@@ -234,11 +239,11 @@
 								<div class="post-image">
 									<div class="col-lg-12 text-center mt-3">
 										<a href="<?php echo base_url() ?>">
-											<img src="<?php echo base_url() ?>assets/images/LOGO KOTA PALEMBANG1.png" class="img-fluid img-thumbnail-no-borders rounded-0" alt="LOGO KOTA PALEMBANG" />
+											<img src="<?php echo base_url() ?>assets/images/Logo Sumsel.png" class="img-fluid img-thumbnail-no-borders rounded-0" alt="Logo Sumsel" />
 										</a>
 								</div>
 								<div class="col-md-6 col-lg-12 order-2 text-center">
-								<p class="mb-0 font-weight-bold text-color-light text-7 text-center mt-4 mb-4">Dinas Koperasi UKM serta Perdagangan Provinsi Sumatera Selatan</p>  
+								<p class="mb-0 font-weight-bold text-color-light text-7 text-center mt-4 mb-4">DINAS KOPERASI DAN UKM PROVINSI SUMATERA SELATAN</p>  
 								<hr class="text-center" style="background-color: #666;position: center; margin-bottom: 6px;">
 								<p class="mb-1 text-center">Pembinaan Pemberdayaan Koperasi UKM serta Perdagangan</p>
 								</div>

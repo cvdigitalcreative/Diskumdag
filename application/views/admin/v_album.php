@@ -18,7 +18,7 @@
           <div class="card card-statistics h-100"> 
             <div class="card-body">
                 <div class="col-xl-12 mb-10">
-                  <a href="" data-toggle="modal" data-target="#add-category-album" class="btn btn-primary btn-block ripple m-t-20">
+                  <a href="" data-toggle="modal" data-target="" class="btn btn-primary btn-block ripple m-t-20">
                       <i class="fa fa-plus pr-2"></i> Create New
                   </a>
                 </div>

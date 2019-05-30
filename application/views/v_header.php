@@ -6,6 +6,8 @@
             }
 ?>
 
+
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -14,15 +16,15 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
 
-		<title>DINAS KOPERASI DAN UKM PROVINSI SUMATERA SELATAN</title>	
+		<title><?php echo $title ?></title>	
 
 		<meta name="keywords" content="HTML5 Template" />
 		<meta name="description" content="Porto - Responsive HTML5 Template">
 		<meta name="author" content="okler.net">
 
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="<?php echo base_url() ?>assets/images/Logo Sumsel.png" type="image/x-icon" />
-		<link rel="apple-touch-icon" href="<?php echo base_url() ?>assets/images/Logo Sumsel.png">
+		<link rel="shortcut icon" href="<?php echo base_url() ?>assets/images/logo_provinsi_sumsel_copy.png" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="<?php echo base_url() ?>assets/images/logo_provinsi_sumsel_copy.png">
 
 		<!-- Mobile Metas -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
@@ -74,8 +76,8 @@
 							<div class="header-column">
 								<div class="header-row">
 									<div class="header-logo">
-										<a href="<?=base_url()?>">
-											<img alt="Porto" width="50px" height="48" data-sticky-width="57" data-sticky-height="48" src="<?php echo base_url() ?>assets/images/Logo Sumsel.png">
+										<a href="<?php echo base_url() ?>">
+											<img alt="Logo Provinsi sumsel" width="45" height="48" data-sticky-width="57" data-sticky-height="48" src="<?php echo base_url() ?>assets/images/logo_provinsi_sumsel_copy.png" title="logo_provinsi_sumsel">
 										</a>
 									</div>
 								</div>
@@ -87,12 +89,12 @@
 											<nav class="collapse">
 												<ul class="nav nav-pills" id="mainNav">
 													<li class="dropdown">
-														<a class="dropdown-item dropdown-toggle active" href="<?php echo base_url().'Home' ?>">
+														<a class=" <?php echo activate_menu('Home'); ?>" href="<?php echo base_url().'Home' ?>">
 															Home
 														</a>
 													</li>
 													<li class="dropdown">
-														<a class="dropdown-item dropdown-toggle" href="#">
+														<a class="dropdown-item dropdown-toggle <?php echo activate_menu('Visi')?>" href="#">
 															Profil
 														</a>
 														<ul class="dropdown-menu">
@@ -119,7 +121,7 @@
 														</ul>
 													</li>
 													<li class="dropdown">
-														<a class="dropdown-item dropdown-toggle" href="#">
+														<a class="dropdown-item dropdown-toggle <?php echo activate_menu('Pelayanan')?>" href="#">
 															Pelayanan
 														</a>
 														<ul class="dropdown-menu">
@@ -141,12 +143,12 @@
 														</ul>
 													</li>
 													<li class="menu">
-														<a class="" href="<?php echo base_url() ?>Pengumuman">
+														<a class=" <?php echo activate_menu('Pengumuman')?>" href="<?php echo base_url() ?>Pengumuman">
 															Pengumuman
 														</a>
 													</li>
 													<li class="dropdown">
-														<a class="dropdown-item dropdown-toggle " href="<?=base_url()?>Berita">
+														<a class="dropdown-item dropdown-toggle <?php echo activate_menu('Berita')?>" href="<?=base_url()?>Berita">
 															Berita
 														</a>
 														<ul class="dropdown-menu">
@@ -187,22 +189,22 @@
 															</li>
 														</ul>
 															<li class="dropdown">
-																<a class="" href="<?=base_url()?>Info">
+																<a class=" <?php echo activate_menu('Info')?>" href="<?=base_url()?>Info">
 																	Info Grafis
 																</a>
 															</li>
 															<li class="dropdown">
-																<a class="" href="<?=base_url()?>Info/download">
+																<a class=" <?php echo activate_menu('Download')?>" href="<?=base_url()?>Download">
 																	Download
 																</a>
 															</li>
 															<li class="dropdown">
-																<a class="" href="<?=base_url()?>Kontak">
+																<a class=" <?php echo activate_menu('Kontak')?>" href="<?=base_url()?>Kontak">
 																	Kontak
 																</a>
 															</li>
 															<li class="dropdown">
-																<a class="" href="<?=base_url()?>Galeri">
+																<a class=" <?php echo activate_menu('Galeri')?>" href="<?=base_url()?>Galeri">
 																	Galeri
 																</a>
 															</li>
@@ -232,18 +234,18 @@
 		</div>
 
 <div role="main" class="main">
-				<section class="section section-default bg-color-dark border-top-0" style="height:580px;max-height: 800px;margin-top: 0px;background-image: url(<?php echo base_url() ?>assets/images/background-kota-blur-5.jpg);background-repeat: no-repeat;background-position: center;">
+				<section class="section section-default bg-color-dark border-top-0" style="height:580px;max-height: 800px;max-width: 100%;margin-top: 0px;background-image: url(<?php echo base_url() ?>assets/images/background-kota-blur-5.jpg);background-repeat: no-repeat;background-position: center;">
 					<div class="container">
 						<div class="row">
 							<div class="col">
 								<div class="post-image">
 									<div class="col-lg-12 text-center mt-3">
 										<a href="<?php echo base_url() ?>">
-											<img src="<?php echo base_url() ?>assets/images/Logo Sumsel.png" class="" style="max-width: 35%;" alt="Logo Sumsel" />
+											<img src="<?php echo base_url() ?>assets/images/logo_provinsi_sumsel_copy.png" class="img-fluid img-thumbnail-no-borders rounded-0" title="logo_provinsi_sumsel" alt="logo_provinsi_sumsel_copy.png" />
 										</a>
 								</div>
-								<div class="col-md-6 col-lg-12 order-2 text-center">
-								<p class="mb-0 font-weight-bold text-color-light text-7 text-center mt-4 mb-4">DINAS KOPERASI DAN UKM PROVINSI SUMATERA SELATAN</p>  
+								<div class="col-xs-4 col-md-6 col-lg-12 order-2 text-center">
+								<p class="mb-0 font-weight-bold text-color-light text-7 text-center mt-4 mb-4">Dinas Koperasi dan UKM Perdagangan Provinsi Sumatera Selatan</p>  
 								<hr class="text-center" style="background-color: #666;position: center; margin-bottom: 6px;">
 								<p class="mb-1 text-center">Pembinaan Pemberdayaan Koperasi UKM serta Perdagangan</p>
 								</div>

@@ -27,7 +27,7 @@
             <div class="form-row">
                 <div class="form-group col">
                     <label class="required font-weight-bold text-dark">Pesan</label>
-                    <textarea maxlength="5000" data-msg-required="Please enter your message." rows="8" class="form-control" name="message" id="message" required></textarea>
+                    <textarea maxlength="5000" data-msg-required="Please enter your message." rows="8" class="form-control" name="pesan" id="message" required></textarea>
                 </div>
             </div>
             <div class="form-row">

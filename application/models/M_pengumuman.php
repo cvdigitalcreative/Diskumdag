@@ -66,6 +66,11 @@ class M_pengumuman extends CI_Model{
 
 	//Front-End
 
+	function pengumuman_per_page($offset,$limit){
+		$hsl=$this->db->query("SELECT tbl_pengumuman.*,DATE_FORMAT(tanggal_pengumuman,'%d/%m/%Y') AS tanggal FROM tbl_pengumuman ORDER BY tulisan_id DESC limit $offset,$limit");
+		return $hsl;
+	}
+
 	function get_post_home(){
 		$hsl=$this->db->query("SELECT tbl_tulisan.*,DATE_FORMAT(tulisan_tanggal,'%d %M %Y') AS tanggal FROM tbl_tulisan ORDER BY tulisan_id DESC limit 4");
 		return $hsl;

@@ -8,7 +8,10 @@
 function index()
     { 
         $y['title']='Galeri';
-        $x['info'] = $this->m_galeri->get_galeri_by_album_id(2);
+        $x['info3'] = $this->m_galeri->get_galeri_by_album_id(3);
+        $x['info4'] = $this->m_galeri->get_galeri_by_album_id(4);
+        $x['info5'] = $this->m_galeri->get_galeri_by_album_id(5);
+        $x['info6'] = $this->m_galeri->get_galeri_by_album_id(6);
         $this->load->view('v_header',$y);
         $this->load->view('v_galeri',$x);
         $this->load->view('v_footer');	

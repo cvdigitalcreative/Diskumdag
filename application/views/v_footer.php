@@ -6,9 +6,9 @@
 								<div class="row py-4">
 									<div class="col text-center">
 										<ul class="footer-social-icons social-icons social-icons-clean social-icons-icon-light mb-3">
-											<li class="social-icons-facebook"><a href="https://www.facebook.com/dwianekateknik.dwianekateknik" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-										<li class="social-icons-twitter"><a href="https://twitter.com/trainingk3dwi?s=09" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-										<li class="social-icons-instagram"><a href="https://instagram.com/trainingk3dwi?igshid=sdk575yqn4xj" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+											<li class="social-icons-facebook"><a href="" target="" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+										<li class="social-icons-twitter"><a href="" target="" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+										<li class="social-icons-instagram"><a href="" target="" title="Instagram"><i class="fab fa-instagram"></i></a></li>
 										</ul>
 										<p><a target="blank" href="digitalcreative.web.id"><strong>Digital Creative</strong></a> - © Copyright 2018. All Rights Reserved.</p>
 									</div>

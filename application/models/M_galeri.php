@@ -96,7 +96,12 @@ class M_galeri extends CI_Model{
 		$hsl=$this->db->query("SELECT tbl_video.*,DATE_FORMAT(video_tanggal,'%d/%m/%Y') AS tanggal FROM tbl_video ORDER BY video_id DESC limit $offset,$limit");
 		return $hsl;
 	}
-	
+
+	function get_galeri(){
+		$hsl=$this->db->query("SELECT tbl_galeri.*,DATE_FORMAT(galeri_tanggal,'%d/%m/%Y') AS tanggal,album_nama FROM tbl_galeri join tbl_album on galeri_album_id=album_id WHERE album_id>1 ORDER BY galeri_id DESC");
+		return $hsl;
+	}
+
 	
 
 }

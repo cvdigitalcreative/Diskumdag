@@ -54,7 +54,7 @@
 
                                     <h2 class="font-weight-semibold text-6 line-height-3 mb-3">
                                         <a style=""
-                                        href="<?php echo base_url()?>Berita/detail/<?=$slug?>"><?= $judul ?></a>
+                                        href="<?php echo base_url()?>Berita/detail/<?=$slug?>"><?= $judul ?>
                                     </h2>
                                     <p style="margin-left: -61px;"><?= limit_words($deskripsi, 26) . '...'; ?></p>
 
@@ -62,7 +62,8 @@
                                         <div>
                                             <p style=""><?= $tanggal ?></p>
                                         </div>
-                                        <div><a href="<?php echo base_url()?>Berita/detail/<?=$slug?>" style="">Read More</a></div>
+                                        <div>Read More</div>
+            </a>
                                     </div>
 
                                 </div>

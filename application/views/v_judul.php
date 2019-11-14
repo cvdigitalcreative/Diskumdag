@@ -28,6 +28,7 @@
         $deskripsi = $i['tulisan_isi'];
         $slug=$i['tulisan_slug'];
         $tanggal=$i['tulisan_tanggal'];
+        $keterangan = $i['tulisan_keterangan'];
 
         ?>
 <div class="container">
@@ -37,12 +38,9 @@
 
                     <article class="">
                         <div class="">
-                            <a href="">
-                                <img src="<?= base_url() ?>\assets\images\<?= $gambar ?>" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="" />
-                            </a>
+                          <img src="<?= base_url() ?>\assets\images\<?= $gambar ?>" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="" />
+                            <p><?php echo $keterangan?></p>
                         </div>
-
-
                         <div class="post-content">
 
                             <h2 class="font-weight-semibold text-6 line-height-3 mb-3 mt-3">
@@ -53,12 +51,8 @@
                                 <div>
                                     <p style=""><?= $tanggal ?></p>
                                 </div>
-
                             </div>
-
                             <p style="margin-left: -61px;"><?= $deskripsi ?></p>
-
-
                         </div>
                     </article>
 

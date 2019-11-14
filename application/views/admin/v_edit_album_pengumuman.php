@@ -72,7 +72,7 @@ wrapper -->
       <div class="row">
         <div class="col-md-6">
           <div class="text-center text-md-left">
-              <p class="mb-0"> &copy; Copyright <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span>. <a href="https://www.digitalcreative.web.id" target="blank"> Warung Kreatif </a> All Rights Reserved. </p>
+               <p><strong>Dinas Koperasi & UKM Prov. Sumsel</strong> - © Copyright 2019. All Rights Reserved.</p>
           </div>
         </div>
         <div class="col-md-6">

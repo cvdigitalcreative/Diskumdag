@@ -3,14 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="keywords" content="HTML5 Template" />
-<meta name="description" content="Webmin - Bootstrap 4 & Angular 5 Admin Dashboard Template" />
-<meta name="author" content="potenzaglobalsolutions.com" />
+<meta name="keywords" content="Dinas UKM dan Koperasi Palembang" />
+<meta name="description" content="Dinas UKM dan Koperasi Palembang" />
+<meta name="author" content="diskopukm.sumselprov.go.id" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<title> Warung Kreatif  ~ Admin</title>
+<title> Dinas UKM dan Koperasi Palembang</title>
 
-<!-- Favicon -->
-<link rel="shortcut icon" href="<?php echo base_url()?>assets/admin/images/favicon.ico" />
+ <link rel="shortcut icon" href="<?php echo base_url()?>assets/admin/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="<?php echo base_url()?>assets/admin/images/favicon.ico">
+
 
 <!-- Font -->
 <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900">
@@ -26,19 +27,19 @@
 <!--=================================
  preloader -->
  
-<div id="pre-loader">
+<!-- <div id="pre-loader">
     <img src="<?php echo base_url()?>assets/admin/images/pre-loader/loader-01.svg" alt="">
-</div>
+</div> -->
 
 <!--=================================
  preloader -->
 
  <!--=================================
  login-->
-<section class="height-100vh d-flex align-items-center page-section-ptb login" style="background-image: url(<?php echo base_url()?>assets/admin/images/bg.jpg); background-repeat: no-repeat; background-size: 1400px 900px" >
+<section class="height-100vh d-flex align-items-center page-section-ptb login" style=" background-repeat: no-repeat; background-size: 1400px 900px" >
   <div class="container">
      <div class="row justify-content-center no-gutters vertical-align">
-       <div class="col-lg-4 col-md-6 login-fancy-bg bg" style="background-image: url(<?php echo base_url()?>assets/admin/images/bg.jpg);">
+       <div class="col-lg-4 col-md-6 login-fancy-bg bg" >
          <div class="login-fancy">
           <h2 class="text-white mb-20">Hello Admin!</h2>
           <p class="mb-20 text-white">Mau Setting apa hari ini? :D</p>

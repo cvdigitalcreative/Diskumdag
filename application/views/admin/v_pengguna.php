@@ -92,7 +92,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 1.0
     </div>
-     <strong>Copyright &copy; 2018 <a href="http://digitalcreative.web.id"> Warung Kreatif </a>.</strong> All rights reserved.
+       <p><strong>Dinas Koperasi & UKM Prov. Sumsel</strong> - © Copyright 2019. All Rights Reserved.</p>
   </footer>
 
   <!-- Control Sidebar -->

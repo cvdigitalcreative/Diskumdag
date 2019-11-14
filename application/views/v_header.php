@@ -18,9 +18,9 @@
 
 		<title><?php echo $title ?></title>	
 
-		<meta name="keywords" content="HTML5 Template" />
-		<meta name="description" content="Porto - Responsive HTML5 Template">
-		<meta name="author" content="okler.net">
+		<meta name="keywords" content="Dinas Koperasi dan UKM provinsi Sumatera Selatan " />
+		<meta name="description" content="Dinas Koperasi dan UKM provinsi Sumatera Selatan ">
+		<meta name="author" content="Dinas Koperasi dan UKM provinsi Sumatera Selatan ">
 
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="<?php echo base_url() ?>assets/images/logo_provinsi_sumsel_copy.png" type="image/x-icon" />
@@ -115,7 +115,7 @@
 															</li>
 															<li>
 																<a class="dropdown-item" href="<?php echo base_url() ?>Visi/pejabat">
-																	Pejabat Dinas KUKMP
+																	Pejabat Dinas Koperasi dan UKM
 																</a>
 															</li>
 														</ul>
@@ -127,19 +127,15 @@
 														<ul class="dropdown-menu">
 															<li>
 																<a class="dropdown-item" href="<?php echo base_url() ?>Pelayanan">
-																	Pelayanan Koperasi dan UKM
+																	Pelayanan Koperasi
 																</a>
 															</li>
 															<li>
-																<a class="dropdown-item" href="<?php echo base_url() ?>Pelayanan/perdagangan">
-																	Pelayanan Perdagangan
+																<a class="dropdown-item" href="<?php echo base_url() ?>Pelayanan">
+																	Pelayanan UKM
 																</a>
 															</li>
-															<li>
-																<a class="dropdown-item" href="<?php echo base_url() ?>Pelayanan/metrologi">
-																	Pelayanan Metrologi
-																</a>
-															</li>
+															
 														</ul>
 													</li>
 													<li class="menu">
@@ -148,7 +144,7 @@
 														</a>
 													</li>
 													<li class="dropdown">
-														<a class="dropdown-item dropdown-toggle <?php echo activate_menu('Berita')?>" href="<?=base_url()?>Berita">
+														<a class="dropdown-item dropdown-toggle <?php echo activate_menu('Berita')?>" href="#">
 															Berita
 														</a>
 														<ul class="dropdown-menu">
@@ -162,31 +158,7 @@
 																	Berita Koperasi
 																</a>
 															</li>
-															<li>
-																<a class="dropdown-item" href="<?=base_url()?>Berita/perdagangan">
-																	Berita Perdagangan
-																</a>
-															</li>
-															<li>
-																<a class="dropdown-item" href="<?=base_url()?>Berita/pk">
-																	Berita Wasdal PK
-																</a>
-															</li>
-															<li>
-																<a class="dropdown-item" href="<?=base_url()?>Berita/upm">
-																	Berita Unit Pengelola Metrologi
-																</a>
-															</li>
-															<li>
-																<a class="dropdown-item" href="<?=base_url()?>Berita/kukmp">
-																	Berita Pusat Diklat KUKMP
-																</a>
-															</li>
-															<li>
-																<a class="dropdown-item" href="<?=base_url()?>Berita/ppukmp">
-																	Berita UPK PPUKMP Pulogadung
-																</a>
-															</li>
+															
 														</ul>
 															<li class="dropdown">
 																<a class=" <?php echo activate_menu('Info')?>" href="<?=base_url()?>Info">
@@ -203,11 +175,30 @@
 																	Kontak
 																</a>
 															</li>
-															<li class="dropdown">
-																<a class=" <?php echo activate_menu('Galeri')?>" href="<?=base_url()?>Galeri">
-																	Galeri
+												         <li class="dropdown">
+														<a class="dropdown-item dropdown-toggle <?php echo activate_menu('Galeri')?>" href="#">
+															Galeri
+														</a>
+														<ul class="dropdown-menu">
+															<li>
+																<a class="dropdown-item" href="<?php echo base_url() ?>Galeri">
+																	Foto
 																</a>
 															</li>
+															<li>
+																<a class="dropdown-item" href="<?php echo base_url() ?>Galeri/vidio">
+																	Video
+																</a>
+															</li>
+
+														</ul>
+                                                                                                                         <li class="dropdown">
+																<a class="dropdown-item dropdown-toggle <?php echo activate_menu('FAQ')?>" href="<?=base_url()?>FAQ">
+																	FAQ
+																</a>
+															</li>
+													</li>
+
 													</li>
 												</ul>
 											</nav>
@@ -233,26 +224,31 @@
 			</header>
 		</div>
 
-<div role="main" class="main">
-				<section class="section section-default bg-color-dark border-top-0" style="height:580px;max-height: 800px;max-width: 100%;margin-top: 0px;background-image: url(<?php echo base_url() ?>assets/images/background-kota-blur-5.jpg);background-repeat: no-repeat;background-position: center;">
-					<div class="container">
-						<div class="row">
-							<div class="col">
-								<div class="post-image">
-									<div class="col-lg-12 text-center mt-3">
-										<a href="<?php echo base_url() ?>">
-											<img src="<?php echo base_url() ?>assets/images/logo_provinsi_sumsel_copy.png" class="img-fluid img-thumbnail-no-borders rounded-0" title="logo_provinsi_sumsel" alt="logo_provinsi_sumsel_copy.png" />
-										</a>
-								</div>
-								<div class="col-xs-4 col-md-6 col-lg-12 order-2 text-center">
-								<p class="mb-0 font-weight-bold text-color-light text-7 text-center mt-4 mb-4">Dinas Koperasi dan UKM Perdagangan Provinsi Sumatera Selatan</p>  
-								<hr class="text-center" style="background-color: #666;position: center; margin-bottom: 6px;">
-								<p class="mb-1 text-center">Pembinaan Pemberdayaan Koperasi UKM serta Perdagangan</p>
-								</div>
-							</div>
-						</div>
+
+	<div role="main" class="main">
+                    <?php $row=$header->row_array()?>         
+				<div class="slider-container rev_slider_wrapper" style="height: 670px;">
+					<div id="revolutionSlider" class="slider rev_slider" data-version="5.4.8" data-plugin-revolution-slider data-plugin-options="{'delay': 9000, 'gridwidth': 1866, 'gridheight': 550, 'disableProgressBar': 'on', 'responsiveLevels': [4096,1200,992,500], 'parallax': { 'type': 'scroll', 'origo': 'enterpoint', 'speed': 1000, 'levels': [2,3,4,5,6,7,8,9,12,50], 'disable_onmobile': 'on' }, 'navigation' : {'arrows': { 'enable': false }, 'bullets': {'enable': true, 'style': 'bullets-style-1', 'h_align': 'center', 'v_align': 'bottom', 'space': 7, 'v_offset': 70, 'h_offset': 0}}}">
+						<ul>
+							<li class="" data-transition="fade">
+                                                            <?php $gambar=$row['tulisan_gambar']?>
+								<img src="<?php echo base_url()?>assets/images/<?php echo $gambar?>"  
+									alt=""
+									data-bgposition="center center" 
+									data-bgfit="cover" 
+									data-bgrepeat="no-repeat" 
+									class="rev-slidebg">
+							</li>								
+						</ul>
 					</div>
 				</div>
-			</section>
+                      		
+</div>
+<div class="row">
+<?php $data = $running_text->row_array() ?>
+  <div class="col-lg-12 col-md-12">
+    <marquee bgcolor="#eaedef" width="100%" scrollamount="5" margin-bottom="0%" style="margin-bottom:0px;"> <p style="color:#1680f2;font-size:18px;margin-top:9px;"> <?php echo $data['tulisan_judul']?> </h3> </marquee>
+  </div>
+</div>
 	
 

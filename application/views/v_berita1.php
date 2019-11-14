@@ -1,7 +1,4 @@
 <div class="col-xl-12" role="main">
-
-
-
         <div role="main" class="main">
             <section class="page-header page-header-modern bg-color-light-scale-1 page-header-md">
                 <div class="container">

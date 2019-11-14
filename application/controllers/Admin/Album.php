@@ -14,7 +14,7 @@ class Album extends CI_Controller{
 
 	function index(){
 		$x['data']=$this->m_album->get_all_album();
-		$y['title'] = 'WK ~ Kategori Album';
+		$y['title'] = 'Dinas UKM dan Perdagangan ~ Tulisan';
 		$this->load->view('admin/v_header',$y);
 		$this->load->view('admin/v_sidebar');
 		$this->load->view('admin/v_album',$x);

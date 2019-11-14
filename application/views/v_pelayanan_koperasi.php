@@ -4,7 +4,7 @@
 			<div class="blog-posts">
 				<div class="row">
 					<div class="col-md-6 col-lg-7 mt-5 mb-4" style="text-align:center;font-size: 24px;color: black;font-family: bold;"> Pelayanan Koperasi dan UKM </div>
-				</div>
+				</div><!--
 				<div class="row">
 						<?php foreach($pelayanan->result_array() as $row) :
 							$gambar = $row['tulisan_gambar'];
@@ -25,4 +25,4 @@
 							</div>
 						<?php endforeach; ?>
 					</div>
-				</div>
+				</div>-->

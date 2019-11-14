@@ -16,7 +16,7 @@ class Tulisan extends CI_Controller{
 
 	function index(){
 		$x['data']=$this->m_tulisan->get_all_tulisan();
-		$y['title'] = 'WK ~ Tulisan';
+		$y['title'] = 'Dinas UKM dan Perdagangan ~ Tulisan';
 		$this->load->view('admin/v_header',$y);
 		$this->load->view('admin/v_sidebar');
 		$this->load->view('admin/v_tulisan',$x);
@@ -24,7 +24,7 @@ class Tulisan extends CI_Controller{
 	function add_tulisan(){
 		$x['album']=$this->m_album->get_all_album();
 		$x['kat']=$this->m_kategori->get_all_kategori();
-		$y['title'] = 'WK ~ Add Tulisan';
+		$y['title'] = 'Dinas UKM dan Perdagangan ~ Tulisan';
 		$this->load->view('admin/v_header',$y);
 		$this->load->view('admin/v_sidebar');
 		$this->load->view('admin/v_add_tulisan',$x);
@@ -34,7 +34,7 @@ class Tulisan extends CI_Controller{
 		$x['album']=$this->m_album->get_all_album();
 		$x['data']=$this->m_tulisan->get_tulisan_by_kode($kode);
 		$x['kat']=$this->m_kategori->get_all_kategori();
-		$y['title'] = 'WK ~ Edit Tulisan';
+		$y['title'] = 'Dinas UKM dan Perdagangan ~ Tulisan';
 		$this->load->view('admin/v_header',$y);
 		$this->load->view('admin/v_sidebar',["side" => 2]);
 		$this->load->view('admin/v_edit_tulisan',$x);
@@ -68,7 +68,10 @@ class Tulisan extends CI_Controller{
 							$filter2=str_replace("$", "", $filter);
 							$filter3=str_replace("(", "", $filter2);
 							$filter4=str_replace(")", "", $filter3);
-							$slug=strtolower(str_replace(" ", "-", $filter4));
+                                                        $filter5=str_replace("!", "", $filter4); 
+                                                        $filter6=str_replace(".", "", $filter5); 
+                                                        $filter7=str_replace(",", "", $filter6); 
+							$slug=strtolower(str_replace(" ", "-", $filter7));
 							$isi=$this->input->post('xisi');
 							$kategori_id=strip_tags($this->input->post('xkategori'));
 							$data=$this->m_kategori->get_kategori_byid($kategori_id);
@@ -83,7 +86,8 @@ class Tulisan extends CI_Controller{
 							$p=$user->row_array();
 							$user_id=$p['pengguna_id'];
 							$user_nama=$p['pengguna_nama'];
-							$this->m_tulisan->simpan_tulisan($judul,$isi,$kategori_id,$kategori_nama,$album_id,$album_nama,$user_id,$user_nama,$gambar,$slug);
+                                                        $keterangan = $this->input->post('xketerangan');
+							$this->m_tulisan->simpan_tulisan($judul,$isi,$kategori_id,$kategori_nama,$album_id,$album_nama,$user_id,$user_nama,$gambar,$slug,$keterangan);
 							echo $this->session->set_flashdata('msg','success');
 							redirect('Admin/Tulisan');
 					}else{
@@ -97,7 +101,10 @@ class Tulisan extends CI_Controller{
 							$filter2=str_replace("$", "", $filter);
 							$filter3=str_replace("(", "", $filter2);
 							$filter4=str_replace(")", "", $filter3);
-							$slug=strtolower(str_replace(" ", "-", $filter4));
+                                                        $filter5=str_replace("!", "", $filter4); 
+                                                        $filter6=str_replace(".", "", $filter5); 
+                                                        $filter7=str_replace(",", "", $filter6); 
+							$slug=strtolower(str_replace(" ", "-", $filter7));
 							$isi=$this->input->post('xisi');
 							$kategori_id=strip_tags($this->input->post('xkategori'));
 							$data=$this->m_kategori->get_kategori_byid($kategori_id);
@@ -112,7 +119,8 @@ class Tulisan extends CI_Controller{
 							$p=$user->row_array();
 							$user_id=$p['pengguna_id'];
 							$user_nama=$p['pengguna_nama'];
-							$this->m_tulisan->simpan_tulisan($judul,$isi,$kategori_id,$kategori_nama,$album_id,$album_nama,$user_id,$user_nama,$slug);
+                                                        $keterangan = $this->input->post('xketerangan');
+							$this->m_tulisan->simpan_tulisan($judul,$isi,$kategori_id,$kategori_nama,$album_id,$album_nama,$user_id,$user_nama,$slug,$keterangan);
 							echo $this->session->set_flashdata('msg','success');
 							redirect('Admin/Tulisan');
 				}
@@ -151,7 +159,10 @@ class Tulisan extends CI_Controller{
 							$filter2=str_replace("$", "", $filter);
 							$filter3=str_replace("(", "", $filter2);
 							$filter4=str_replace(")", "", $filter3);
-							$slug=strtolower(str_replace(" ", "-", $filter4));
+                                                        $filter5=str_replace("!", "", $filter4); 
+                                                        $filter6=str_replace(".", "", $filter5); 
+                                                        $filter7=str_replace(",", "", $filter6); 
+							$slug=strtolower(str_replace(" ", "-", $filter7));
 							$isi=$this->input->post('xisi');
 							$kategori_id=strip_tags($this->input->post('xkategori'));
 							$data=$this->m_kategori->get_kategori_byid($kategori_id);
@@ -167,7 +178,8 @@ class Tulisan extends CI_Controller{
 							$p=$user->row_array();
 							$user_id=$p['pengguna_id'];
 							$user_nama=$p['pengguna_nama'];
-							$this->m_tulisan->update_tulisan($tulisan_id,$judul,$isi,$kategori_id,$kategori_nama,$album_id,$album_nama,$user_id,$user_nama,$gambar,$slug);
+                                                        $keterangan = $this->input->post('xketerangan');
+							$this->m_tulisan->update_tulisan($tulisan_id,$judul,$isi,$kategori_id,$kategori_nama,$album_id,$album_nama,$user_id,$user_nama,$gambar,$slug,$keterangan);
 							echo $this->session->set_flashdata('msg','info');
 
 							redirect('Admin/Tulisan');                    
@@ -183,7 +195,10 @@ class Tulisan extends CI_Controller{
 							$filter2=str_replace("$", "", $filter);
 							$filter3=str_replace("(", "", $filter2);
 							$filter4=str_replace(")", "", $filter3);
-							$slug=strtolower(str_replace(" ", "-", $filter4));
+                                                        $filter5=str_replace("!", "", $filter4); 
+                                                        $filter6=str_replace(".", "", $filter5); 
+                                                        $filter7=str_replace(",", "", $filter6); 
+							$slug=strtolower(str_replace(" ", "-", $filter7));
 							$isi=$this->input->post('xisi');
 							$kategori_id=strip_tags($this->input->post('xkategori'));
 							$data=$this->m_kategori->get_kategori_byid($kategori_id);
@@ -199,7 +214,8 @@ class Tulisan extends CI_Controller{
 							$p=$user->row_array();
 							$user_id=$p['pengguna_id'];
 							$user_nama=$p['pengguna_nama'];
-							$this->m_tulisan->update_tulisan_tanpa_img($tulisan_id,$judul,$isi,$kategori_id,$kategori_nama,$album_id,$album_nama,$user_id,$user_nama,$slug);
+                                                        $keterangan = $this->input->post('xketerangan');
+							$this->m_tulisan->update_tulisan_tanpa_img($tulisan_id,$judul,$isi,$kategori_id,$kategori_nama,$album_id,$album_nama,$user_id,$user_nama,$slug,$keterangan);
 							echo $this->session->set_flashdata('msg','info');
 							redirect('Admin/Tulisan');
 	            } 

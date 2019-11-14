@@ -23,7 +23,7 @@ class Pengumuman extends CI_Controller{
 	}
 	function index(){
 		$x['data']=$this->m_pengumuman->get_all_pengumuman();
-		$y['title'] = 'WK ~ Tulisan';
+		$y['title'] = 'Dinas UKM dan Perdagangan ~ Tulisan';
 		$this->load->view('admin/v_header',$y);
 		$this->load->view('admin/v_sidebar');
 		$this->load->view('admin/v_pengumuman',$x);
@@ -31,7 +31,7 @@ class Pengumuman extends CI_Controller{
 	function add_tulisan(){
 		$x['album']=$this->m_album->get_all_album();
 		$x['kat']=$this->m_kategori->get_all_kategori();
-		$y['title'] = 'WK ~ Add Tulisan';
+		$y['title'] = 'Dinas UKM dan Perdagangan ~ Tulisan';
 		$this->load->view('admin/v_header',$y);
 		$this->load->view('admin/v_sidebar');
 		$this->load->view('admin/v_add_pengumuman',$x);
@@ -41,7 +41,7 @@ class Pengumuman extends CI_Controller{
 		$x['album']=$this->m_album->get_all_album();
 		$x['data']=$this->m_pengumuman->get_tulisan_by_kode($kode);
 		$x['kat']=$this->m_kategori->get_all_kategori();
-		$y['title'] = 'WK ~ Edit Tulisan';
+		$y['title'] = 'Dinas UKM dan Perdagangan ~ Tulisan';
 		$this->load->view('admin/v_header',$y);
 		$this->load->view('admin/v_sidebar',["side" => 2]);
 		$this->load->view('admin/v_edit_pengumuman',$x);

@@ -15,8 +15,9 @@ class Berita extends CI_Controller
     function index()
     {
         $y['title'] = 'Berita';
+        $y['running_text'] = $this->m_tulisan->get_tulisan_by_kategori(12);
         $x['info'] = $this->m_tulisan->get_post_home();
-
+        $y['header'] = $this->m_tulisan->get_tulisan_by_kategori(22);
         $this->load->view('v_header', $y);
         $this->load->view('v_berita1', $x);
         $this->load->view('v_footer');
@@ -26,8 +27,9 @@ class Berita extends CI_Controller
     function ukm()
     {
         $y['title'] = 'Berita UKM';
+        $y['running_text'] = $this->m_tulisan->get_tulisan_by_kategori(12);
         $x['info'] = $this->m_tulisan->get_tulisan_by_kategori(14);
-
+        $y['header'] = $this->m_tulisan->get_tulisan_by_kategori(22);
         $this->load->view('v_header', $y);
         $this->load->view('v_berita', $x);
         $this->load->view('v_footer');
@@ -35,8 +37,9 @@ class Berita extends CI_Controller
     function koperasi()
     {
         $y['title'] = 'Berita Koperasi';
+        $y['running_text'] = $this->m_tulisan->get_tulisan_by_kategori(12);
         $x['info'] = $this->m_tulisan->get_tulisan_by_kategori(15);
-
+        $y['header'] = $this->m_tulisan->get_tulisan_by_kategori(22);
         $this->load->view('v_header', $y);
         $this->load->view('v_berita', $x);
         $this->load->view('v_footer');
@@ -44,8 +47,8 @@ class Berita extends CI_Controller
     function perdagangan()
     {
         $y['title'] = 'Berita perdagangan';
+        $y['running_text'] = $this->m_tulisan->get_tulisan_by_kategori(12);
         $x['info'] = $this->m_tulisan->get_tulisan_by_kategori(16);
-
         $this->load->view('v_header', $y);
         $this->load->view('v_berita', $x);
         $this->load->view('v_footer');
@@ -94,7 +97,9 @@ class Berita extends CI_Controller
     function detail($slug)
     {
         $y['title'] = 'Dinas Koperasi';
+        $y['running_text'] = $this->m_tulisan->get_tulisan_by_kategori(12);
         $x['info'] = $this->m_tulisan->get_berita_by_slug($slug);
+        $y['header'] = $this->m_tulisan->get_tulisan_by_kategori(22);
         $this->load->view('v_header', $y);
         $this->load->view('v_judul', $x);
         $this->load->view('v_footer');

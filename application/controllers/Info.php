@@ -6,23 +6,27 @@ class Info extends CI_Controller
     function __construct()
     {
         parent::__construct();
-
         $this->load->model('m_galeri');
+        $this->load->model('m_tulisan');
+	$this->load->model('m_pengunjung');
+	$this->load->model('m_tentang');
+	$this->load->model('m_pengumuman');
         $this->load->model('m_kontak');
     }
     function index()
     { 
-        $y['title']='Info Grafis';
-        $x['info'] = $this->m_galeri->get_galeri_by_album_id(1);
+        $y['title'] = 'Info grafis';
+        $y['running_text'] = $this->m_tulisan->get_tulisan_by_kategori(12);    
+        $y['header'] = $this->m_tulisan->get_tulisan_by_kategori(22);    
         $this->load->view('v_header',$y);
-        $this->load->view('v_infografis',$x);
-        $this->load->view('v_footer');	
+        $this->load->view('v_infografis');
+	$this->load->view('v_footer');
         
     }
     function download()
     {
         $y['title']='Download';
-
+        $y['header'] = $this->m_tulisan->get_tulisan_by_kategori(22);
         $this->load->view('v_header',$y);
         $this->load->view('v_download');
         $this->load->view('v_footer');	
@@ -30,6 +34,8 @@ class Info extends CI_Controller
     function pesan()
     {
         $y['title']='Kontak';
+        $y['running_text'] = $this->m_tulisan->get_tulisan_by_kategori(12);
+        $y['header'] = $this->m_tulisan->get_tulisan_by_kategori(22);
         $nama=$this->input->post('nama');
         $email=$this->input->post('email');
         $pesan=$this->input->post('pesan');

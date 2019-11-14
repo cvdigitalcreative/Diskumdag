@@ -31,7 +31,7 @@ wrapper -->
 <meta name="description" content="Webmin - Bootstrap 4 & Angular 5 Admin Dashboard Template" />
 <meta name="author" content="potenzaglobalsolutions.com" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<title>Dashboard Warung Kreatif</title>
+<title>Dashboard Dinas Koperasi dan UKM Provinsi Sumatera Selatan</title>
 
 <!-- Favicon -->
 <link rel="shortcut icon" href="<?php echo base_url()?>assets/admin/images/favicon.ico" />
@@ -154,13 +154,13 @@ wrapper -->
         <!-- All Form  -->
         <li>
           <a href="javascript:void(0);" data-toggle="collapse" data-target="#Form">
-            <div class="pull-left"><i class="ti-files"></i><span class="right-nav-text">Portofolio & Posting</span></div>
+            <div class="pull-left"><i class="ti-files"></i><span class="right-nav-text">Posting</span></div>
             <div class="pull-right"><i class="ti-plus"></i></div><div class="clearfix"></div>
           </a>
           <ul id="Form" class="collapse" data-parent="#sidebarnav">
-            <li> <a href="<?php echo base_url()?>Admin/Kategori">Kategori Portofolio & Posting</a> </li>
+            <li> <a href="<?php echo base_url()?>Admin/Kategori">Kategori Posting</a> </li>
            <!--  <li> <a href="<?php echo base_url()?>Admin/Tulisan/add_tulisan">Form Add Tulisan</a> </li> -->
-            <li> <a href="<?php echo base_url()?>Admin/Tulisan">List Portofolio & Posting</a> </li>
+            <li> <a href="<?php echo base_url()?>Admin/Tulisan">List Posting</a> </li>
           </ul>
         </li>
         
@@ -199,7 +199,7 @@ wrapper -->
       <div class="page-title">
       <div class="row">
           <div class="col-sm-6">
-              <h4 class="mb-0"> Dashboard</h4>
+              <h4 class="mb-0"> Admin Dinas Koperasi dan UKM Provinsi Sumatera Selatan</h4>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right">
@@ -208,7 +208,7 @@ wrapper -->
             </ol>
           </div>
         </div>
-      </div>
+      </div><!--
       <div class="row">
         <div class="col-12 mb-30">
            <div class="card card-statistics">
@@ -432,37 +432,9 @@ wrapper -->
                  </div>
               </div>
             </div>
-        </div>
-     
-<!--=================================
- wrapper -->
-      
-<!--=================================
- footer -->
+        </div>-->
 
-    <footer class="bg-white p-4">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="text-center text-md-left">
-              <p class="mb-0"> &copy; Copyright <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span>. <a href="#"> Warung Kreatif </a> All Rights Reserved. </p>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <ul class="text-center text-md-right">
-            <li class="list-inline-item"><a href="#">Terms & Conditions </a> </li>
-            <li class="list-inline-item"><a href="#">API Use Policy </a> </li>
-            <li class="list-inline-item"><a href="#">Privacy Policy </a> </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-    </div><!-- main content wrapper end-->
-  </div>
-</div>
-</div>
 
-<!--=================================
- footer -->
 
 
  

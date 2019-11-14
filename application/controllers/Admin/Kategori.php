@@ -13,7 +13,7 @@ class Kategori extends CI_Controller{
 
 	function index(){
 		$x['data']=$this->m_kategori->get_all_kategori();
-		$y['title'] = 'WK ~ Kategori Tulisan';
+		$y['title'] = 'Dinas UKM dan Perdagangan ~ Tulisan';
 		$this->load->view('admin/v_header',$y);
 		$this->load->view('admin/v_sidebar');
 		$this->load->view('admin/v_kategori',$x);

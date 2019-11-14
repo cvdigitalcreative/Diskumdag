@@ -12,9 +12,12 @@
 
 		function index(){
 			$y['title'] = "DINAS KOPERASI DAN UKM PROVINSI SUMATERA SELATAN";
+                        $y['running_text'] = $this->m_tulisan->get_tulisan_by_kategori(12);
 			$x['slider'] = $this->m_tulisan->get_tulisan_by_kategori(2);
+                        $x['tautan'] = $this->m_tulisan->get_tulisan_by_kategori(17);
+                        $y['header'] = $this->m_tulisan->get_tulisan_by_kategori(22);
 			$x['pengumuman'] = $this->m_pengumuman->get_all_pengumuman_by_tanggal();
-			$x['berita'] = $this->m_tulisan->get_tulisan_by_kategori(4);
+			$x['berita'] = $this->m_tulisan->get_tulisan_by_kategori_berita(14,15);
 			$this->load->view('v_header',$y);
 			$this->load->view('v_home',$x);
 			$this->load->view('v_social_media');
@@ -24,7 +27,9 @@
 
 		function pengumuman(){
 			$y['title'] = "DINAS KOPERASI DAN UKM PROVINSI SUMATERA SELATAN";
+                        $y['running_text'] = $this->m_tulisan->get_tulisan_by_kategori(12);
 			$x['pengumuman'] = $this->m_pengumuman->get_all_pengumuman();
+                        $y['header'] = $this->m_tulisan->get_tulisan_by_kategori(22);
 			$this->load->view('v_header',$y);
 			$this->load->view('v_pengumuman',$x);
 			$this->load->view('v_footer');

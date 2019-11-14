@@ -21,10 +21,13 @@
               <table id="datatable" class="table table-striped table-bordered p-0">
                 <thead>
                     <tr>
+                      <th style="width:90px;">Nomor</th>
                         <th style="width:90px;">Tanggal</th>
                         <th style="width:85px;">Nama</th>
                         <th style="width:70px;">Email</th>
+                        <th>Judul</th>
                         <th>Pesan</th>
+                        <th style="width:70px;">Status</th>
                         <th style="width: 80px;">Aksi</th>
                         
                     </tr>
@@ -36,18 +39,26 @@
                               $no++;
                               $inbox_id=$i['inbox_id'];
                               $inbox_nama=$i['inbox_nama'];
+                              $inbox_judul=$i['inbox_judul'];
                               $inbox_email=$i['inbox_email'];
                               $inbox_msg=$i['inbox_pesan'];
                               $tanggal=$i['tanggal'];
+                              $status = $i['status'];
                                    
                       ?>
                             <tr>
+                              <td><?php echo $no;?></td>
                               <td><?php echo $tanggal;?></td>
                               <td><?php echo $inbox_nama;?></td>
                               <td><?php echo $inbox_email;?></td>
+                              <td><?php echo $inbox_judul ?></td>
                               <td><?php echo $inbox_msg;?></td>
+                              <td><?php echo $status ?></td>
                               <td style="text-align:left;">
-                                    <a href="" data-toggle="modal" data-target="#ModalHapus<?php echo $inbox_id;?>"><span class="ti-trash"></span></a>
+                                    <a href="" data-toggle="modal" data-target="#ModalHapus<?php echo $inbox_id;?>"><i class="fa fa-reply"></i></a>
+                                    <a href="" data-toggle="modal" data-target="#Modalreply<?php echo $inbox_id;?>"><span class="ti-trash"></span></a>
+                                    <a href="" data-toggle="modal" data-target="#ModalReply<?php echo $inbox_id;?>"><i class="fa fa-pencil"></i></a>
+
                               </td>
                             </tr>
                         <?php endforeach;?>
@@ -63,6 +74,7 @@
           $inbox_id=$i['inbox_id'];
           $inbox_nama=$i['inbox_nama'];
           $inbox_email=$i['inbox_email'];
+          $inbox_judul = $i['inbox_judul'];
           $inbox_msg=$i['inbox_pesan'];
           $tanggal=$i['tanggal'];
         ?>
@@ -74,7 +86,51 @@
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
                     <div class="modal-body p-20">
-                        <form action="<?php echo base_url().'Admin/Inbox/hapus_inbox'?>" method="post">
+                        <form action="<?php echo base_url().'Kontak/balas'?>" method="post">
+                            <div class="row">
+                                <div class="col-xl-12 col-md-12">
+                                    <input type="hidden" name="id" value="<?php echo $inbox_id ?>">
+                                </div>
+                                <div class="col-md-12">
+                                    <label>Pesan :</label><textarea class="form-control mt-2" name="pesan" rows="5" value="<?php echo $inbox_msg ?>"><?php echo $inbox_msg ?></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <label>Reply :</label><textarea class="form-control mt-2" placeholder="Reply" rows="5" name="balas"></textarea>
+                                </div>
+                            </div>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger ripple" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success ripple save-category">Kirim</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <?php endforeach;?> 
+    </div> 
+
+    <!-- Modal reply -->
+
+
+        <?php foreach ($data->result_array() as $i) :
+          $inbox_id=$i['inbox_id'];
+          $inbox_nama=$i['inbox_nama'];
+          $inbox_judul=$i['inbox_judul'];
+          $inbox_email=$i['inbox_email'];
+          $inbox_msg=$i['inbox_pesan'];
+          $tanggal=$i['tanggal'];
+        ?>
+        <div class="modal" tabindex="-1" role="dialog" id="Modalreply<?php echo $inbox_id;?>">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Delete a category</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body p-20">
+                        <form action="<?php echo base_url().'Kontak/hapus'?>" method="post">
                             <div class="row">
                                 <div class="col-md-12">
                                     <input type="hidden" name="kode" value="<?php echo $inbox_id;?>"/> 
@@ -92,7 +148,46 @@
             </div>
         </div>
         <?php endforeach;?> 
-    </div> 
+
+<!-- Modal Edit -->
+
+          <?php foreach ($edit_inbox->result_array() as $i) :
+          $inbox_id=$i['inbox_id'];
+          $inbox_reply = $i['inbox_reply'];
+          $inbox_msg=$i['inbox_pesan'];
+        ?>
+        <div class="modal" tabindex="-1" role="dialog" id="ModalReply<?php echo $inbox_id;?>">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Edit Pesan</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body p-20">
+                        <form action="<?php echo base_url().'Kontak/balas_edit'?>" method="post">
+                            <div class="row">
+                                <div class="col-xl-12 col-md-12">
+                                    <input type="hidden" name="id" value="<?php echo $inbox_id ?>">
+                                </div>
+                                <div class="col-md-12">
+                                    <label>Pesan :</label><textarea class="form-control mt-2" name="pesan" rows="5" value="<?php echo $inbox_msg ?>"><?php echo $inbox_msg ?></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <label>Reply :</label><textarea class="form-control mt-2" placeholder="Reply" rows="5" name="balas" value="$inbox_reply"><?php echo $inbox_reply ?></textarea>
+                                </div>
+                            </div>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger ripple" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success ripple save-category">Kirim</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <?php endforeach;?> 
+
 <!--=================================
  wrapper -->
       

@@ -24,9 +24,13 @@ wrapper -->
                 <div class="card-body">
                   <form  action="<?php echo base_url().'Admin/Tulisan/simpan_tulisan'?>" method="post" class="form-horizontal" enctype="multipart/form-data">
                       <div class="form-group">
-                          <label class="control-label" for="fname">First name</label>
+                          <label class="control-label" for="fname">Judul</label>
                           <div class="mb-4">
                             <input type="text" class="form-control" id="fname" name="xjudul" placeholder="First name" required />
+                          </div>
+                          <label class="control-label" for="fketerangan">Keterangan</label>
+                          <div class="mb-4">
+                            <input type="text" class="form-control" id="fketerangan" name="xketerangan" placeholder="First name">
                           </div>
                           <label class="control-label" for="fname">News Content</label>
                             <textarea id="summernote" name="xisi" ><p>Hello Summernote</p></textarea>
@@ -92,7 +96,7 @@ wrapper -->
       <div class="row">
         <div class="col-md-6">
           <div class="text-center text-md-left">
-              <p class="mb-0"> &copy; Copyright <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span>. <a href="https://www.digitalcreative.web.id" target="blank"> Warung Kreatif </a> All Rights Reserved. </p>
+                <p><strong>Dinas Koperasi & UKM Prov. Sumsel</strong> - © Copyright 2019. All Rights Reserved.</p>
           </div>
         </div>
         <div class="col-md-6">

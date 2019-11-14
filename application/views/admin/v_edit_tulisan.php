@@ -11,7 +11,7 @@ wrapper -->
       <div class="page-title">
       <div class="row">
           <div class="col-sm-6">
-              <h4 class="mb-0"> Form Edut Tulisan</h4>
+              <h4 class="mb-0"> Form Edit Tulisan</h4>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right">
@@ -25,12 +25,17 @@ wrapper -->
         <div class="col-xl-8 mb-30">
             <div class="card card-statistics h-100"> 
                 <div class="card-body">
-                  <form  action="<?php echo base_url().'Admin/Pengumuman/update_tulisan'?>" method="post" class="form-horizontal" enctype="multipart/form-data">
+                  <form  action="<?php echo base_url().'Admin/Tulisan/update_tulisan'?>" method="post" class="form-horizontal" enctype="multipart/form-data">
                       <div class="form-group">
                           <label class="control-label" for="fname">First name</label>
                           <div class="mb-4">
                             <input type="hidden" name="kode" value="<?php echo $b['tulisan_id'];?>">
+                            <input type="hidden" name="xkategori" value="<?php echo $b['tulisan_kategori_id'];?>">
                             <input type="text" class="form-control" id="fname" name="xjudul" placeholder="First name" value="<?php echo $b['tulisan_judul'];?>" required />
+                          </div>
+                          <label class="control-label" for="fketerangan">Keterangan</label>
+                          <div class="mb-4">
+                            <input type="text" class="form-control" id="fketerangan" name="xketerangan" placeholder="First name" value="<?php echo $b['tulisan_keterangan'];?>">
                           </div>
                           <label class="control-label" for="fname">News Content</label>
                             <textarea id="summernote" name="xisi" required><?php echo $b['tulisan_isi'];?></textarea>
@@ -41,6 +46,15 @@ wrapper -->
         <div class="col-xl-4 mb-30">
             <div class="card card-statistics h-51"> 
                 <div class="card-body">
+                  <div class="form-group">
+                    <label class="mr-sm-2" for="inlineFormCustomSelect">Kategori</label>
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="xkategori">
+                        <option selected value="<?php echo $b['tulisan_kategori_id'] ?>"><?php echo $b['tulisan_kategori_nama']; ?></option> 
+                          <?php foreach($kat->result_array() as $row) : ?>        
+                            <option value="<?php echo $row['kategori_id'];?>"><?php echo $row['kategori_nama'];?></option>
+                          <?php endforeach; ?>                
+                    </select>
+                  </div>
                   <div class="form-group">
                       <label for="exampleFormControlFile1">Upload Image</label>
                       <input type="file" class="form-control-file" id="exampleFormControlFile1" name="filefoto" >
@@ -64,7 +78,7 @@ wrapper -->
       <div class="row">
         <div class="col-md-6">
           <div class="text-center text-md-left">
-              <p class="mb-0"> &copy; Copyright <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span>. <a href="https://www.digitalcreative.web.id" target="blank"> Warung Kreatif </a> All Rights Reserved. </p>
+                 <p><strong>Dinas Koperasi & UKM Prov. Sumsel</strong> - © Copyright 2019. All Rights Reserved.</p>
           </div>
         </div>
         <div class="col-md-6">

@@ -50,6 +50,8 @@
 
 
 			$y['title'] = "Dinas UKM dan Perdagangan-Pengumuman";
+                        $y['running_text'] = $this->m_tulisan->get_tulisan_by_kategori(12);
+                        $y['header'] = $this->m_tulisan->get_tulisan_by_kategori(22);
 			$x['pengumuman'] = $this->m_pengumuman->pengumuman_per_page($offset,$limit);
 			$this->load->view('v_header',$y);
 			$this->load->view('v_pengumuman',$x);
@@ -57,7 +59,9 @@
 		}
 
 		function detail(){
-			$y['title'] = 'Dinas UKM dan Perdagangan-Pengumuman';
+		    $y['title'] = 'Dinas UKM dan Perdagangan-Pengumuman';
+                    $y['running_text'] = $this->m_tulisan->get_tulisan_by_kategori(12);
+                    $y['header'] = $this->m_tulisan->get_tulisan_by_kategori(22);
 		    $slug = $this->uri->segment(3);	   
 		    $link=$this->uri->segment(4);
 		    $x['data'] = $this->m_pengumuman->get_join_table($slug);

@@ -18,7 +18,7 @@
           <div class="card card-statistics h-100"> 
             <div class="card-body">
                 <div class="col-xl-12 mb-10">
-                  <a href="" data-toggle="modal" data-target="" class="btn btn-primary btn-block ripple m-t-20">
+                  <a href="" data-toggle="modal" data-target="#add-category-album" class="btn btn-primary btn-block ripple m-t-20">
                       <i class="fa fa-plus pr-2"></i> Create New
                   </a>
                 </div>
@@ -142,7 +142,7 @@
                         <form action="<?php echo base_url().'Admin/Album/hapus_album'?>" method="post">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <input type="hidden" name="kode" value="<?php echo $album_id;?>"/> 
+                                    <input type="hidden" name="kode" value="<?php echo $galeri_id;?>"/> 
                                     <p>Apakah kamu yakin ingin menghapus kategori <b><i><?php echo $album_nama;?></i></b></p>
                                 </div>
                             </div>
@@ -168,7 +168,7 @@
       <div class="row">
         <div class="col-md-6">
           <div class="text-center text-md-left">
-              <p class="mb-0"> &copy; Copyright <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span>. <a href="https://www.digitalcreative.web.id" target="blank"> Warung Kreatif </a> All Rights Reserved. </p>
+              <p><strong>Dinas Koperasi & UKM Prov. Sumsel</strong> - © Copyright 2019. All Rights Reserved.</p>
           </div>
         </div>
         <div class="col-md-6">

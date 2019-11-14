@@ -16,10 +16,12 @@ class Tentang extends CI_Controller {
 	public function index()
 	{
 		$y['title']='Warung Kreatif ~ Tentang';
+                $y['running_text'] = $this->m_tulisan->get_tulisan_by_kategori(12);
 		$x['header'] = $this->m_galeri->get_galeri_by_album_id_withlimit(13,1);
 		$x['team'] = $this->m_tentang->get_tentang_by_kategori(1);
 		$x['quote'] = $this->m_tentang->get_tentang_by_kategori(2);
 		$x['touch'] = $this->m_tentang->get_tentang_by_kategori(3);
+                $y['header'] = $this->m_tulisan->get_tulisan_by_kategori(22);
 		$z['footer'] = $this->m_tentang->get_tentang_by_kategori(4);
 		$this->load->view('v_header',$y);
 		$this->load->view('v_about',$x);
@@ -30,6 +32,7 @@ class Tentang extends CI_Controller {
                 $nama=str_replace("'", "", $this->input->post('name',TRUE));
                 $email=str_replace("'", "", $this->input->post('email',TRUE));      
                 $pesan=str_replace("'", "", $this->input->post('message',TRUE));
+                
                 $this->m_kontak->kirim_pesan($nama,$email,$pesan);
                 echo $this->session->set_flashdata('msg',' <p>NB: </strong> Terima Kasih Telah Menghubungi Kami.</p>');
                 redirect('Tentang');

@@ -7,11 +7,13 @@ class Inbox extends CI_Controller{
             redirect($url);
         };
 		$this->load->model('m_kontak');
+                $this->load->model('m_inbox');
 	}
 
 	function index(){
 		$this->m_kontak->update_status_kontak();
 		$x['data']=$this->m_kontak->get_all_inbox();
+                $x['edit_inbox']=$this->m_inbox->get_all_inbox_all();
 		$y['title'] = 'WK ~ Inbox';
 		$this->load->view('admin/v_header',$y);
 		$this->load->view('admin/v_sidebar');

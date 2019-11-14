@@ -4,7 +4,7 @@
 			<div class="col-lg-8 order-1 order-lg-2">
 				
 							<h1 class="font-weight-normal text-center text-8 mt-5 mb-4" style="font-family: Comic Sans MS;">Pengumuman</h1>
-							<?php foreach($pengumuman->result_array() as $row) : 
+							 <?php foreach($pengumuman->result_array() as $row) : 
 								$tanggal = date_create($row['tanggal_pengumuman']);
 							?>
 							<p style="margin: 0px;font-weight: bold;"><?php echo date_format($tanggal,"d/m/Y"); ?></p>
@@ -14,7 +14,7 @@
 							<?php endforeach;?>
 							<div class="mt-5 mb-5">
 							
-							<?php echo $page; ?>
+							<?php echo $page; ?> 
 
 							</div>
 			</div>

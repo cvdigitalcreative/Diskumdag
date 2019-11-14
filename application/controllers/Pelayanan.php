@@ -11,7 +11,9 @@
 
 		function index(){
 			$y['title'] = "Dinas UKM dan Perdagangan";
+                        $y['running_text'] = $this->m_tulisan->get_tulisan_by_kategori(12);
 			$x['pelayanan'] = $this->m_tulisan->get_tulisan_by_kategori(10);
+                        $y['header'] = $this->m_tulisan->get_tulisan_by_kategori(22);
 			$this->load->view('v_header',$y);
 			$this->load->view('v_pelayanan_koperasi',$x);
 			$this->load->view('v_footer');	
@@ -19,7 +21,9 @@
 
 		function perdagangan(){
 			$y['title'] = "Dinas UKM dan Perdagangan";
+                        $y['running_text'] = $this->m_tulisan->get_tulisan_by_kategori(12);
 			$x['perdagangan'] = $this->m_tulisan->get_tulisan_by_kategori(11);
+                        $y['header'] = $this->m_tulisan->get_tulisan_by_kategori(22);
 			$this->load->view('v_header',$y);
 			$this->load->view('v_pelayanan_perdagangan',$x);
 			$this->load->view('v_footer');	
@@ -36,6 +40,8 @@
 
 		function pejabat(){
 			$y['title'] = "Dinas UKM dan Perdagangan";
+                        $y['running_text'] = $this->m_tulisan->get_tulisan_by_kategori(12);
+                        $y['header'] = $this->m_tulisan->get_tulisan_by_kategori(22);
 			$x['pejabat'] = $this->m_tulisan->get_tulisan_by_kategori(9);
 			$this->load->view('v_header',$y);
 			$this->load->view('v_pejabat_dinas',$x);

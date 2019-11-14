@@ -1,23 +1,16 @@
-<div>
-<div class="container">
-   <?php
-    foreach ($info->result_array() as $i) {
-        $gambar = $i['galeri_gambar'];
-        $judul = $i['galeri_judul'];
-        ?>
-
-
-            <div class="row mt-4 mb-6">
-                <div class="col">
-                    <div class="col-lg-12">
-                        <h4 style="margin-top: 50px;"><?= $judul ?></h4>
-                        <div class="col-md-12" style="margin-bottom: 20px;">
-                            <img src="<?= base_url() ?>\assets\images\<?= $gambar ?>" width="100%">
-                        </div>
-
-                    </div>
-                <?php } ?>
-            </div>
-        </div>
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="container py-2">
+  <div class="row">
+    <div class="col">
+       <h1 class="mt-4"> Infografis </h1>
+       <img src="<?php echo base_url() ?>assets/images/pendiriankoperasi.jpg" alt="Paris" style="width:100%;">
     </div>
+  </div>
 </div>
+
